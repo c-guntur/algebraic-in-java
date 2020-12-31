@@ -1,8 +1,75 @@
 package none.cgutils.algebraic.sum;
 
+
+/*
+
+🄵 [NoExtensionShape]
+
+🄰 (AbstractShape)
+    '-- 🄾 Pentagon
+
+🄾 CustomShape
+    '-- 🄾 Hexagon
+
+🅂 {Shape}
+    |
+    '-- 🄵 [Circle]
+    |
+    '-- 🅂 {Triangle}
+    |    |
+    |    '-- 🄵 [Equilateral]
+    |    |
+    |    '-- 🄵 [Isosceles]
+    |    |
+    |    '-- 🄵 [Scalene]
+    |
+    '-- 🅄 }FourSidedShape{
+        |
+        '-- 🄾 Rectangle
+            |
+            '-- 🄾 Square
+
+*/
 public class Example3Sealed {
 
+    public static void main(String[] args) {
+        NoExtensionShape noExtensionShape = new NoExtensionShape();
+        System.out.println("\n1. Final NoExtension shape --->\n\t" + noExtensionShape.getDescription());
 
+        Pentagon pentagon = new Pentagon();
+        System.out.println("\n2. Open Pentagon extended from AbstractShape  --->\n\t" + pentagon.getDescription());
+
+        CustomShape customShape = new CustomShape();
+        System.out.println("\n3. Open CustomShape (extendable) --->\n\t" + customShape.getDescription());
+
+        Hexagon hexagon = new Hexagon();
+        System.out.println("\n\t4. Open Hexagon extended from CustomShape --->\n\t\t" + hexagon.getDescription());
+
+        Circle circle = new Circle();
+        System.out.println("\n5. Final Circle sealed via Shape --->\n\t" + circle.getDescription());
+
+        Triangle triangle = new Triangle();
+        System.out.println("\n6. Sealed Triangle sealed via Shape --->\n\t" + triangle.getDescription());
+
+        Equilateral equilateral = new Equilateral();
+        System.out.println("\n\t7. Final Equilateral sealed via Triangle --->\n\t\t" + equilateral.getDescription());
+
+        Isosceles isosceles = new Isosceles();
+        System.out.println("\n\t8. Final Isosceles sealed via Triangle --->\n\t\t" + isosceles.getDescription());
+
+        Scalene scalene = new Scalene();
+        System.out.println("\n\t9. Final Scalene sealed via Triangle --->\n\t\t" + scalene.getDescription());
+
+        FourSidedShape fourSidedShape = new FourSidedShape();
+        System.out.println("\n10. Non-sealed extended from Sealed Shape --->\n\t" + fourSidedShape.getDescription());
+
+        Rectangle rectangle = new Rectangle();
+        System.out.println("\n\t11. Open extended from Non-sealed FourSidedShape --->\n\t\t" + rectangle.getDescription());
+
+        Square square = new Square();
+        System.out.println("\n\t\t12. Open extended from an Open Rectangle --->\n\t\t\t" + square.getDescription());
+
+    }
 }
 
 // ---------------------------------------------------
@@ -20,7 +87,6 @@ final class NoExtensionShape {
 // ---------------------------------------------------
 
 
-
 // ---------------------------------------------------
 // ABSTRACT CLASS HAS TO BE EXTENDED TO BE PUT TO USE
 abstract class AbstractShape {
@@ -33,13 +99,14 @@ abstract class AbstractShape {
 
     abstract String getDescription();
 }
+
 // EXTENDING AN ABSTRACT CLASS
-class Hexagonal extends AbstractShape {
-    public Hexagonal() {
+class Pentagon extends AbstractShape {
+    public Pentagon() {
         super("This is a hexagonal shape");
     }
 
-    public Hexagonal(String description) {
+    public Pentagon(String description) {
         super(description);
     }
 
@@ -51,33 +118,36 @@ class Hexagonal extends AbstractShape {
 // ---------------------------------------------------
 
 
-
 // ---------------------------------------------------
 // AN "OPEN" CLASS CAN BE EXTENDED
 class CustomShape {
 
     protected String description;
 
+    public CustomShape() {
+        this("This is a custom shape");
+    }
+
     public CustomShape(String description) {
         this.description = description;
     }
 
     String getDescription() {
-        return "This is a custom shape";
+        return description;
     }
 }
-class Hexakaidecagon extends CustomShape {
 
-    public Hexakaidecagon() {
-        super("This is a sixteen-sided shape");
+class Hexagon extends CustomShape {
+
+    public Hexagon() {
+        super("This is a six-sided shape");
     }
 
-    public Hexakaidecagon(String description) {
+    public Hexagon(String description) {
         super(description);
     }
 }
 // ---------------------------------------------------
-
 
 
 // ---------------------------------------------------
@@ -111,16 +181,19 @@ sealed class Triangle extends Shape permits Equilateral, Isosceles, Scalene {
         super(description);
     }
 }
+
 final class Equilateral extends Triangle {
     public Equilateral() {
         super("Three sides of this triangle have same size");
     }
 }
+
 final class Isosceles extends Triangle {
     public Isosceles() {
         super("Two sides of this triangle have same size");
     }
 }
+
 final class Scalene extends Triangle {
     public Scalene() {
         super("No sides of this triangle have same size");
@@ -137,13 +210,20 @@ non-sealed class FourSidedShape extends Shape {
         super("This is a four sided shape");
     }
 }
+
 // NON-SEALED IS N OPEN CLASS
 class Rectangle extends FourSidedShape {
+
+    public Rectangle(String description) {
+        super(description);
+    }
+
     public Rectangle() {
         super("This is a rectangle");
     }
 }
-class Square extends FourSidedShape {
+
+class Square extends Rectangle {
     public Square() {
         super("This is a square");
     }
