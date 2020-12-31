@@ -1,0 +1,80 @@
+= Algebraic data types
+
+Algebraic data types were introduced in Hope, a small functional programming language developed in the 1970s at the University of Edinburgh.
+
+*Algebraic* refers to the property that an Algebraic Data Type is created by algebraic operations. The algebra here, is *_sums_* and *_products_*:
+
+*sum*:: alternation (A | B, meaning A or B but not both)
+*product*:: combination (A B, meaning A and B together)
+
+Algebraic data types are also known as *_composite types_* - a type formed by combining other types
+
+== A deeper look at Sum and Product types
+
+Let us look at the two common types: product types (value holders) and sum types (variant types).
+
+=== Values of algebraic types
+
+.Deeper look at the algebraic data types
+[cols="3*^.^"]
+|===
+||Sum Types | Product Types
+
+| Use
+| Define variants
+| Hold Values
+
+| Logic
+| Logical OR operation (only one of the variants is possible)
+| Logical AND operation (combination of several values)
+
+| Content
+| Each variant can have its own constructor with specified number of arguments
+| Contains several values of possibly different types themselves
+
+| Special examples
+| Enums (Enumerations) are a special sum type with a zero-argument constructor
+| Recursive types are a special product type
+
+.4+| Other examples
+
+| `Enums` (additional data cannot be associated with an enum, once created)
+| `Class`
+
+| `Optional`
+| Tuple (developer created)
+
+| `Sealed` types
+| `Records` (Java 14,15) Java 16
+
+|
+| `Visitor`
+|===
+
+
+Analysis of values
+ADTs are analyzed via Pattern Matching.
+
+
+
+Analysis
+
+Pattern matching
+
+
+
+
+
+Links
+
+https://cr.openjdk.java.net/~briangoetz/amber/datum.html
+
+https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html
+
+https://en.wikipedia.org/wiki/Pattern_matching
+
+https://en.wikipedia.org/wiki/Algebraic_data_type
+
+https://hackernoon.com/catamorphisms-for-java-developers-e3cc10b43d03
+
+https://en.wikipedia.org/wiki/Catamorphism
