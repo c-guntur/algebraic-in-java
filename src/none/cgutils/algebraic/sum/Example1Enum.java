@@ -3,6 +3,91 @@ package none.cgutils.algebraic.sum;
 import java.util.EnumMap;
 import java.util.EnumSet;
 
+//----------------------------------------------------------------------------------------------
+//Adding behavior to an enum
+enum YearPartEnum {
+
+    // If the enum contains fields and/or methods,
+    // the list of enum constants must be terminated by a semicolon ';'
+    Q1("Quarter 1"),
+    Q2("Quarter 2"),
+    Q3("Quarter 3"),
+    Q4("Quarter 4");
+
+    // If the enum contains fields and/or methods,
+    // these need to be defined AFTER the list of enum constants
+    private final String description;
+
+    YearPartEnum(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+}
+//----------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------
+// Abstract methods in enum
+enum UsingAbstractMethods {
+
+    // If the enum contains fields and/or methods,
+    // the list of enum constants must be terminated by a semicolon ';'
+    ONE {
+        @Override
+        String descriptiveText() {
+            return "first";
+        }
+    },
+    TWO {
+        @Override
+        String descriptiveText() {
+            return "second";
+        }
+    },
+    THREE {
+        @Override
+        String descriptiveText() {
+            return "third";
+        }
+    };
+
+    // If the enum contains fields and/or methods,
+    // these need to be defined AFTER the list of enum constants
+    abstract String descriptiveText();
+}
+//----------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------
+//interface extension in enum
+interface Describable {
+    String getDescription();
+}
+
+enum EnumWithInterface implements Describable {
+
+    FOUR {
+        @Override
+        public String getDescription() {
+            return "fourth";
+        }
+    },
+    FIVE {
+        @Override
+        public String getDescription() {
+            return "fifth";
+        }
+    },
+    SIX {
+        @Override
+        public String getDescription() {
+            return "sixth";
+        }
+    }
+}
+//----------------------------------------------------------------------------------------------
+
 public class Example1Enum {
     public static void main(String[] args) {
 
@@ -38,10 +123,11 @@ public class Example1Enum {
         System.out.println("yearPartEnum = " + yearPartEnum + "\n");
         System.out.print("6. Enums can be derived from Strings using a valueOf() on the Enum.class  ---> \n\t");
         yearPartEnum = Enum.valueOf(YearPartEnum.class, "Q3");
-        System.out.println("yearPartEnum = " + yearPartEnum + "\n");
+        System.out.println("yearPartEnum = " + yearPartEnum);
 
         // ABSTRACT METHODS IN ENUMS
         UsingAbstractMethods abstractMethods = UsingAbstractMethods.THREE;
+
         System.out.println("\n7. abstractMethods enum value  ---> \n\t" + abstractMethods);
         System.out.println("\n8. Call the abstract method  ---> \n\tThis is the " + abstractMethods.descriptiveText() + " value.");
         System.out.println("\n9. Get the name of the enum  ---> \n\tThe name value of this enum is: " + abstractMethods.name());
@@ -50,96 +136,34 @@ public class Example1Enum {
         // INTERFACE IMPLEMENTATION IN ENUMS
         // (Extension of class or interface is not allowed).
         EnumWithInterface enumWithInterface = EnumWithInterface.SIX;
-        System.out.println("\n\n11. enumWithInterface enum value  ---> \n\t" + enumWithInterface);
+        System.out.println("\n11. enumWithInterface enum value  ---> \n\t" + enumWithInterface);
         System.out.println("\n12. Call the interface method  ---> \n\tThis is the " + enumWithInterface.getDescription() + " value.");
         System.out.println("\n13. Get the name of the enum  ---> \n\tThe name value of this enum is: " + enumWithInterface.name());
         System.out.println("\n14. Get the ordinal value  ---> \n\tThe ordinal value of this enum is: " + enumWithInterface.ordinal());
 
         // ENUMSET
         EnumSet<EnumWithInterface> fourAndFive = EnumSet.of(EnumWithInterface.FOUR, EnumWithInterface.FIVE);
+        System.out.print("\n15. EnumSet values --->\n\t\t[");
+        fourAndFive.forEach(obj -> System.out.print("\n\t\t\t" + obj));
+        System.out.print("\n\t\t]\n");
 
         // ENUMMAP
-        EnumMap<UsingAbstractMethods, String> enumMap = new EnumMap<>(UsingAbstractMethods.class);
-        enumMap.put(UsingAbstractMethods.ONE, "I");
-        enumMap.put(UsingAbstractMethods.TWO, "II");
-        enumMap.put(UsingAbstractMethods.THREE, "III");
+        EnumMap<UsingAbstractMethods, String> romanNumeralMap = new EnumMap<>(UsingAbstractMethods.class);
+        romanNumeralMap.put(UsingAbstractMethods.ONE, "I");
+        romanNumeralMap.put(UsingAbstractMethods.TWO, "II");
+        romanNumeralMap.put(UsingAbstractMethods.THREE, "III");
+        System.out.print("\n16. EnumMap values --->\n\t\t[");
+        romanNumeralMap.forEach((key, value) -> System.out.print("\n\t\t\t" + key + ": " + value));
+        System.out.print("\n\t\t]\n");
 
-    }
-}
-
-//Adding behavior to an enum
-enum YearPartEnum {
-
-    // If the enum contains fields and/or methods,
-    // the list of enum constants must be terminated by a semicolon ';'
-    Q1("Quarter 1"),
-    Q2("Quarter 2"),
-    Q3("Quarter 3"),
-    Q4("Quarter 4");
-
-    // If the enum contains fields and/or methods,
-    // these need to be defined AFTER the list of enum constants
-    private final String description;
-
-    YearPartEnum(String description) {
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-}
-
-// Abstract methods in enum
-enum UsingAbstractMethods {
-
-    // If the enum contains fields and/or methods,
-    // the list of enum constants must be terminated by a semicolon ';'
-    ONE {
-        @Override
-        String descriptiveText() {
-            return "first";
-        }
-    },
-    TWO {
-        @Override
-        String descriptiveText() {
-            return "second";
-        }
-    },
-    THREE {
-        @Override
-        String descriptiveText() {
-            return "third";
-        }
-    };
-
-    // If the enum contains fields and/or methods,
-    // these need to be defined AFTER the list of enum constants
-    abstract String descriptiveText();
-}
-
-//interface extension in enum
-interface Describable {
-    String getDescription();
-}
-enum EnumWithInterface implements Describable {
-    FOUR {
-        @Override
-        public String getDescription() {
-            return "fourth";
-        }
-    },
-    FIVE {
-        @Override
-        public String getDescription() {
-            return "fifth";
-        }
-    },
-    SIX {
-        @Override
-        public String getDescription() {
-            return "sixth";
-        }
+        // The Class.isEnum() does not work if enums have a body !!!
+        // Ue instanceof or Class.isAssignableFrom()
+        // CHECK IF THE VARIABLE IS AN ENUM
+        System.out.println("------------------------------------------------------------------------------");
+        System.out.println("\t=> NOTE: Class.isEnum() is good for vanilla enums --->\n\t\tyearPartEnum is an enum? " + yearPartEnum.getClass().isEnum() + "\n");
+        System.out.println("\t=> NOTE: Class.isEnum() fails for enums with body --->\n\t\tabstractMethods is an enum? " + abstractMethods.getClass().isEnum() + "\n");
+        System.out.println("\t=> NOTE: Use instanceof for enums with body --->\n\t\tabstractMethods is an enum? " + (abstractMethods instanceof Enum) + "\n");
+        System.out.println("\t=> NOTE: Enum.class.isAssignableFrom is another way to test --->\n\t\tabstractMethods is an enum? " + (Enum.class.isAssignableFrom(abstractMethods.getClass())));
+        System.out.println("------------------------------------------------------------------------------");
     }
 }

@@ -3,6 +3,11 @@ package none.cgutils.algebraic.sum;
 
 /*
 
+JEPs:
+    https://openjdk.java.net/jeps/360 (Java 15)
+    https://openjdk.java.net/jeps/397 (Java 16)
+
+
 🄵 [NoExtensionShape]
 
 🄰 (AbstractShape)
@@ -30,49 +35,8 @@ package none.cgutils.algebraic.sum;
             '-- 🄾 Square
 
 */
-public class Example3Sealed {
 
-    public static void main(String[] args) {
-        NoExtensionShape noExtensionShape = new NoExtensionShape();
-        System.out.println("\n1. Final NoExtension shape --->\n\t" + noExtensionShape.getDescription());
-
-        Pentagon pentagon = new Pentagon();
-        System.out.println("\n2. Open Pentagon extended from AbstractShape  --->\n\t" + pentagon.getDescription());
-
-        CustomShape customShape = new CustomShape();
-        System.out.println("\n3. Open CustomShape (extendable) --->\n\t" + customShape.getDescription());
-
-        Hexagon hexagon = new Hexagon();
-        System.out.println("\n\t4. Open Hexagon extended from CustomShape --->\n\t\t" + hexagon.getDescription());
-
-        Circle circle = new Circle();
-        System.out.println("\n5. Final Circle sealed via Shape --->\n\t" + circle.getDescription());
-
-        Triangle triangle = new Triangle();
-        System.out.println("\n6. Sealed Triangle sealed via Shape --->\n\t" + triangle.getDescription());
-
-        Equilateral equilateral = new Equilateral();
-        System.out.println("\n\t7. Final Equilateral sealed via Triangle --->\n\t\t" + equilateral.getDescription());
-
-        Isosceles isosceles = new Isosceles();
-        System.out.println("\n\t8. Final Isosceles sealed via Triangle --->\n\t\t" + isosceles.getDescription());
-
-        Scalene scalene = new Scalene();
-        System.out.println("\n\t9. Final Scalene sealed via Triangle --->\n\t\t" + scalene.getDescription());
-
-        FourSidedShape fourSidedShape = new FourSidedShape();
-        System.out.println("\n10. Non-sealed extended from Sealed Shape --->\n\t" + fourSidedShape.getDescription());
-
-        Rectangle rectangle = new Rectangle();
-        System.out.println("\n\t11. Open extended from Non-sealed FourSidedShape --->\n\t\t" + rectangle.getDescription());
-
-        Square square = new Square();
-        System.out.println("\n\t\t12. Open extended from an Open Rectangle --->\n\t\t\t" + square.getDescription());
-
-    }
-}
-
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 // FINAL CLASS DOES NOT ALLOW ANY EXTENSION
 final class NoExtensionShape {
     private String description = "This is a final shape";
@@ -84,10 +48,10 @@ final class NoExtensionShape {
         return description;
     }
 }
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 
 
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 // ABSTRACT CLASS HAS TO BE EXTENDED TO BE PUT TO USE
 abstract class AbstractShape {
 
@@ -115,10 +79,10 @@ class Pentagon extends AbstractShape {
         return this.description;
     }
 }
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 
 
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 // AN "OPEN" CLASS CAN BE EXTENDED
 class CustomShape {
 
@@ -147,10 +111,10 @@ class Hexagon extends CustomShape {
         super(description);
     }
 }
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 
 
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 sealed abstract class Shape permits Circle, Triangle, FourSidedShape {
 
     protected String description;
@@ -228,6 +192,46 @@ class Square extends Rectangle {
         super("This is a square");
     }
 }
-// ---------------------------------------------------
+//----------------------------------------------------------------------------------------------
 
+public class Example3Sealed {
 
+    public static void main(String[] args) {
+        NoExtensionShape noExtensionShape = new NoExtensionShape();
+        System.out.println("\n1. Final NoExtension shape --->\n\t" + noExtensionShape.getDescription());
+
+        Pentagon pentagon = new Pentagon();
+        System.out.println("\n2. Open Pentagon extended from AbstractShape  --->\n\t" + pentagon.getDescription());
+
+        CustomShape customShape = new CustomShape();
+        System.out.println("\n3. Open CustomShape (extendable) --->\n\t" + customShape.getDescription());
+
+        Hexagon hexagon = new Hexagon();
+        System.out.println("\n\t4. Open Hexagon extended from CustomShape --->\n\t\t" + hexagon.getDescription());
+
+        Circle circle = new Circle();
+        System.out.println("\n5. Final Circle sealed via Shape --->\n\t" + circle.getDescription());
+
+        Triangle triangle = new Triangle();
+        System.out.println("\n6. Sealed Triangle sealed via Shape --->\n\t" + triangle.getDescription());
+
+        Equilateral equilateral = new Equilateral();
+        System.out.println("\n\t7. Final Equilateral sealed via Triangle --->\n\t\t" + equilateral.getDescription());
+
+        Isosceles isosceles = new Isosceles();
+        System.out.println("\n\t8. Final Isosceles sealed via Triangle --->\n\t\t" + isosceles.getDescription());
+
+        Scalene scalene = new Scalene();
+        System.out.println("\n\t9. Final Scalene sealed via Triangle --->\n\t\t" + scalene.getDescription());
+
+        FourSidedShape fourSidedShape = new FourSidedShape();
+        System.out.println("\n10. Non-sealed extended from Sealed Shape --->\n\t" + fourSidedShape.getDescription());
+
+        Rectangle rectangle = new Rectangle();
+        System.out.println("\n\t11. Open extended from Non-sealed FourSidedShape --->\n\t\t" + rectangle.getDescription());
+
+        Square square = new Square();
+        System.out.println("\n\t\t12. Open extended from an Open Rectangle --->\n\t\t\t" + square.getDescription());
+
+    }
+}

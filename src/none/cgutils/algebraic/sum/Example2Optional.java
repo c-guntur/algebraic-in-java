@@ -28,7 +28,6 @@ public class Example2Optional {
                 integerOptional.get());
 
 
-
         // CREATE AN OPTIONAL WITH VALUE BUT NULLABLE
         Optional<Integer> integerNullableOptional = Optional.ofNullable(11);
 
@@ -37,6 +36,10 @@ public class Example2Optional {
             System.out.println("\n4. Value of nullable optional exists --->\n\tValue: " +
                     integerNullableOptional.get());
         }
+        // AS A LAMBDA
+        integerNullableOptional.ifPresent(integer -> System.out.println(
+                "\n4a. Value of nullable optional exists --->\n\tValue: " +
+                integer));
 
 
         // HANDLING NULLS
@@ -59,24 +62,23 @@ public class Example2Optional {
                         integerNullableOptional.orElse(-1));
 
 
-
         // THROW EXCEPTION WHEN VALUE IS EMPTY (NULL) USING AN EXCEPTION SUPPLIER
         try {
-            Supplier<RuntimeException> exceptionSupplier = () -> new RuntimeException("The value is empty");
+            Supplier<RuntimeException> exceptionSupplier =
+                    () -> new RuntimeException("The value is empty");
             Integer nonNullInteger = integerNullableOptional.orElseThrow(exceptionSupplier);
         } catch (RuntimeException e) {
             System.out.println(
                     "\n8. Exception thrown when using an orElseThrow() on an empty optional --->\n\t" +
-                    "This should print!");
+                            "This should print!");
         }
-
 
 
         // PERFORM CONSUMER ACTION BASED ON VALUE BEING NON-NULL OR A RUNNABLE IF NULL
         Consumer<Integer> nonEmptyValueAction =
                 x -> System.out.println(
                         "\n9. Consumer action for non-null value optional --->\n\t " +
-                        "This is a non-null integer value: " + x);
+                                "This is a non-null integer value: " + x);
 
         Runnable emptyValueRunnable =
                 () -> System.out.println(
@@ -86,7 +88,5 @@ public class Example2Optional {
         integerOptional.ifPresentOrElse(nonEmptyValueAction, emptyValueRunnable);
 
         integerNullableOptional.ifPresentOrElse(nonEmptyValueAction, emptyValueRunnable);
-
-
     }
 }

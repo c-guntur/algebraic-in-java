@@ -1,14 +1,7 @@
 package none.cgutils.algebraic.product;
 
-public class Example1Class {
-
-    public static void main(String[] args) {
-        Pojo pojo = new Pojo("Hello World", 1, Boolean.TRUE);
-        System.out.println("\n1. Pojo --->\n\t" + pojo);
-    }
-
-}
-
+//----------------------------------------------------------------------------------------------
+// A PLAIN OLD JAVA OBJECT
 class Pojo {
 
     private String string;
@@ -55,5 +48,13 @@ class Pojo {
                 ", flag=" + flag +
                 '}';
     }
+}
+//----------------------------------------------------------------------------------------------
 
+public class Example1Class {
+
+    public static void main(String[] args) {
+        Pojo pojo = new Pojo("Hello World", 1, Boolean.TRUE);
+        System.out.println("\n1. Pojo --->\n\t" + pojo);
+    }
 }
