@@ -98,14 +98,14 @@ ADTs are analyzed via Pattern Matching.
 == Further reading
 
 link:https://cr.openjdk.java.net/~briangoetz/amber/datum.html[Brian Goetz's Thoughts on Datum]
+
+link:https://en.wikipedia.org/wiki/Algebraic_data_type[Wikipedia Article on Algebraic Data Types]
+
 link:https://cr.openjdk.java.net/~briangoetz/amber/datum2.html[Previous version of Brian Goetz's Thoughts on Datum]
 
-link:https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html
+link:https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html[Brian Goetz's Thoughts on Pattern Matching]
 
-link:https://en.wikipedia.org/wiki/Pattern_matching
+link:https://en.wikipedia.org/wiki/Pattern_matching[Wikipedia Article on Pattern Matching]
 
-link:https://en.wikipedia.org/wiki/Algebraic_data_type
+link:https://en.wikipedia.org/wiki/Catamorphism[Wikipedia Article on Catamorphism]
 
-link:https://hackernoon.com/catamorphisms-for-java-developers-e3cc10b43d03
-
-link:https://en.wikipedia.org/wiki/Catamorphism
