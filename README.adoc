@@ -104,6 +104,20 @@ Let us look at the two common types: product types (value holders) and sum types
 
 ADTs are analyzed via Pattern Matching.
 
+== Project Structure
+----
+|____LICENSE
+|____README.adoc       <----- This file
+|____assets            <----- Images linked above
+|____src
+| |____none
+| | |____cgutils
+| | | |____algebraic
+| | | | |____sum       <----- Examples of Sum types
+| | | | |____product   <----- Examples of Product types
+| | | | |____other     <----- Examples of patterns
+
+----
 
 == Further reading
 
