@@ -82,12 +82,12 @@ public class Example2Tuple {
 
     public static void main(String[] args) {
         Pair<Integer, String> integerStringPair = new Pair<>(1, "One");
-        System.out.println("\n1. integerStringPair --->\n\t" + integerStringPair);
+        System.out.println("\n1. integerStringPair --->\n\t\t" + integerStringPair);
 
         Pair<String, Boolean> stringBooleanPair = new Pair<>("TRUE", Boolean.TRUE);
-        System.out.println("\n2. stringBooleanPair --->\n\t" + stringBooleanPair);
+        System.out.println("\n2. stringBooleanPair --->\n\t\t" + stringBooleanPair);
 
         Twin<String> stringTwin = new Twin<>("One", "Uno");
-        System.out.println("\n3. stringTwin --->\n\t" + stringTwin);
+        System.out.println("\n3. stringTwin --->\n\t\t" + stringTwin);
     }
 }

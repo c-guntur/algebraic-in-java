@@ -55,20 +55,20 @@ public class Example1Class {
 
     public static void main(String[] args) {
         Pojo pojo = new Pojo("Hello World", 1, Boolean.TRUE);
-        System.out.println("\n1. Pojo --->\n\t" + pojo);
+        System.out.println("\n1. Pojo --->\n\t\t" + pojo);
 
         // Pattern matching
-        System.out.println("\n2. pojo is type of Pojo using instanceof --->\n\t" +
+        System.out.println("\n2. pojo is type of Pojo using instanceof --->\n\t\t" +
                 (pojo instanceof Pojo));
-        System.out.println("\n3. pojo is type of Pojo using isInstance()) --->\n\t" +
+        System.out.println("\n3. pojo is type of Pojo using isInstance()) --->\n\t\t" +
                 Pojo.class.isInstance(pojo));
-        System.out.println("\n4. pojo is type of Pojo using isAssignableFrom() --->\n\t" +
+        System.out.println("\n4. pojo is type of Pojo using isAssignableFrom() --->\n\t\t" +
                 (pojo.getClass().isAssignableFrom(Pojo.class)));
-        System.out.println("\n5. pojo is type of Pojo using getName() --->\n\t" +
+        System.out.println("\n5. pojo is type of Pojo using getName() --->\n\t\t" +
                 "none.cgutils.algebraic.product.Pojo".equals(pojo.getClass().getName()));
-        System.out.println("\n6. pojo is type of Pojo using getCanonicalName() --->\n\t" +
+        System.out.println("\n6. pojo is type of Pojo using getCanonicalName() --->\n\t\t" +
                 "none.cgutils.algebraic.product.Pojo".equals(pojo.getClass().getCanonicalName()));
-        System.out.println("\n7. pojo is type of Pojo using getSimpleName() --->\n\t" +
+        System.out.println("\n7. pojo is type of Pojo using getSimpleName() --->\n\t\t" +
                 "Pojo".equals(pojo.getClass().getSimpleName()));
 
     }
