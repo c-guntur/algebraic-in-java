@@ -101,7 +101,7 @@ link:https://cr.openjdk.java.net/~briangoetz/amber/datum.html[Brian Goetz's Thou
 
 link:https://en.wikipedia.org/wiki/Algebraic_data_type[Wikipedia Article on Algebraic Data Types]
 
-link:https://cr.openjdk.java.net/~briangoetz/amber/datum2.html[Previous version of Brian Goetz's Thoughts on Datum]
+link:https://cr.openjdk.java.net/~briangoetz/amber/datum_2.html[An older version of Brian Goetz's Thoughts on Datum]
 
 link:https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html[Brian Goetz's Thoughts on Pattern Matching]
 
