@@ -90,29 +90,21 @@ Let us look at the two common types: product types (value holders) and sum types
 
 
 
-Analysis of values
+== Analysis
+
 ADTs are analyzed via Pattern Matching.
 
 
+== Further reading
 
-Analysis
+link:https://cr.openjdk.java.net/~briangoetz/amber/datum.html
 
-Pattern matching
+link:https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html
 
+link:https://en.wikipedia.org/wiki/Pattern_matching
 
+link:https://en.wikipedia.org/wiki/Algebraic_data_type
 
+link:https://hackernoon.com/catamorphisms-for-java-developers-e3cc10b43d03
 
-
-Links
-
-https://cr.openjdk.java.net/~briangoetz/amber/datum.html
-
-https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html
-
-https://en.wikipedia.org/wiki/Pattern_matching
-
-https://en.wikipedia.org/wiki/Algebraic_data_type
-
-https://hackernoon.com/catamorphisms-for-java-developers-e3cc10b43d03
-
-https://en.wikipedia.org/wiki/Catamorphism
+link:https://en.wikipedia.org/wiki/Catamorphism
