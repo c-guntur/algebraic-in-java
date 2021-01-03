@@ -96,10 +96,8 @@ Let us look at the two common types: product types (value holders) and sum types
 
 | link:src/none/cgutils/algebraic/other/Example1Variance.java[Example1Variance]
 | Covariance and Contravariance
-| link:src/none/cgutils/algebraic/other/Example2VisitorPattern.java[Example1VisitorPattern]
-| A walkthrough of the visitor pattern
-| link:src/none/cgutils/algebraic/other/Example3Morphism.java[Example3Morphism]
-| Homomorphism and Catamorphism
+| link:src/none/cgutils/algebraic/other/Example2VisitorPattern.java[Example2VisitorPattern]
+| A walk-through of the visitor pattern
 |===
 
 == Analysis

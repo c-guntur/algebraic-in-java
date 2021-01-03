@@ -148,9 +148,6 @@ public class Example1Variance {
                         "\n\tClass Simple Name: " +
                         shape.getClass().getSimpleName() + "\n"));
 
-        contravariantShapes.forEach(shape ->
-                System.out.println("Contravariance :: Class Simple Name --->\n\t" +
-                        shape.getClass().getSimpleName()));
 
         //VALID
         contravariantShapes.add(new Isosceles());
