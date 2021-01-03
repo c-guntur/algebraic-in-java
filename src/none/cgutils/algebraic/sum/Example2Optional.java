@@ -4,6 +4,7 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+// Catamorphism of Value or Empty
 public class Example2Optional {
 
     public static void main(String[] args) {

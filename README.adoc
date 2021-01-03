@@ -88,7 +88,19 @@ Let us look at the two common types: product types (value holders) and sum types
 | Records in Java
 |===
 
+=== Related
 
+.Examples of patterns used in Algebraic Java
+|===
+| Example | Description
+
+| link:src/none/cgutils/algebraic/other/Example1Variance.java[Example1Variance]
+| Covariance and Contravariance
+| link:src/none/cgutils/algebraic/other/Example2VisitorPattern.java[Example1VisitorPattern]
+| A walkthrough of the visitor pattern
+| link:src/none/cgutils/algebraic/other/Example3Morphism.java[Example3Morphism]
+| Homomorphism and Catamorphism
+|===
 
 == Analysis
 
@@ -108,4 +120,3 @@ link:https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html[Brian Goet
 link:https://en.wikipedia.org/wiki/Pattern_matching[Wikipedia Article on Pattern Matching]
 
 link:https://en.wikipedia.org/wiki/Catamorphism[Wikipedia Article on Catamorphism]
-
