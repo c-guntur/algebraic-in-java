@@ -21,20 +21,25 @@ record SimpleRecord(String stringValue, Integer integerValue) { }
 //----------------------------------------------------------------------------------------------
 // COMPACT CONSTRUCTOR EXAMPLES
 record RecordWithCompactConstructorValidation(String stringValue, Integer integerValue) {
+
     public RecordWithCompactConstructorValidation {
+
         Objects.requireNonNull(stringValue);
         Objects.requireNonNull(integerValue);
     }
 }
 
 record RecordWithCompactConstructorException(String stringValue, int integerValue) {
+
     public RecordWithCompactConstructorException {
+
         if (integerValue < 0) {
             throw new ExampleCustomException("Integer value must be a positive value");
         }
     }
 }
 class ExampleCustomException extends RuntimeException{
+
     public ExampleCustomException(String message) {
         super(message);
     }
@@ -51,6 +56,7 @@ record RecordWithMultipleConstructors(String stringValue, Integer integerValue) 
     }
 
     public RecordWithMultipleConstructors(String stringValue, Integer integerValue) {
+
         this.stringValue = stringValue;
         this.integerValue = integerValue;
     }
@@ -61,10 +67,12 @@ record RecordWithMultipleConstructors(String stringValue, Integer integerValue) 
 //----------------------------------------------------------------------------------------------
 //interface extension in records
 interface Describable {
+
     String getDescription();
 }
 
 record RecordImplementingAnInterface(String stringValue, Integer integerValue) implements Describable {
+
     @Override
     public String getDescription() {
         return "this record implements an interface";
@@ -75,6 +83,7 @@ record RecordImplementingAnInterface(String stringValue, Integer integerValue) i
 
 //----------------------------------------------------------------------------------------------
 record RecordOverridingAccessor(String stringValue, Integer integerValue) {
+
     @Override
     public String stringValue() {
         return "This is a " + stringValue;
@@ -87,6 +96,7 @@ record RecordOverridingAccessor(String stringValue, Integer integerValue) {
 // RECORDS FROM A SEALED TYPE
 sealed interface Shape
         permits Triangle, Rectangle {
+
     String getDescription();
 }
 
@@ -111,12 +121,14 @@ record Rectangle(int width, int height) implements Shape {
 public class Example3Record {
 
     public static void main(String[] args) {
+
         SimpleRecord simpleRecord = new SimpleRecord("a string", 7);
         System.out.println("\n1. Simple Record --->\n\t\t" + simpleRecord+"\n");
         // ACCESSORS DO NOT HAVE A get PREFIX
         System.out.println("2. Simple Record StringValue (simpleRecord.stringValue()): --->\n\t\t" +
                 simpleRecord.stringValue()+"\n");
 
+        // PATTERN MATCHING
         System.out.println("3. Class.isRecord  --->\n\t\t" +
                 "simpleRecord is a Record? " +
                 simpleRecord.getClass().isRecord() + "\n");
@@ -211,5 +223,3 @@ public class Example3Record {
         //---------------------------------------------------------------------
     }
 }
-
-

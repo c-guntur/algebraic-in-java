@@ -5,7 +5,9 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class Example2Optional {
+
     public static void main(String[] args) {
+
         // CREATE AN EMPTY OPTIONAL
         Optional<String> optionalEmptyString = Optional.empty();
 

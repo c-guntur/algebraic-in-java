@@ -62,6 +62,7 @@ enum UsingAbstractMethods {
 //----------------------------------------------------------------------------------------------
 //interface extension in enum
 interface Describable {
+
     String getDescription();
 }
 
@@ -89,6 +90,7 @@ enum EnumWithInterface implements Describable {
 //----------------------------------------------------------------------------------------------
 
 public class Example1Enum {
+
     public static void main(String[] args) {
 
         // CREATE AN ENUM
@@ -178,6 +180,7 @@ public class Example1Enum {
         System.out.println("\n\t\t]\n");
 
 
+        // PATTERN MATCHING
         // The Class.isEnum() does not work if enums have a body !!!
         // Ue instanceof or Class.isAssignableFrom()
         // CHECK IF THE VARIABLE IS AN ENUM

@@ -39,6 +39,7 @@ JEPs:
 //----------------------------------------------------------------------------------------------
 // FINAL CLASS DOES NOT ALLOW ANY EXTENSION
 final class NoExtensionShape {
+
     private String description = "This is a final shape";
 
     public NoExtensionShape() {
@@ -66,6 +67,7 @@ abstract class AbstractShape {
 
 // EXTENDING AN ABSTRACT CLASS
 class Pentagon extends AbstractShape {
+
     public Pentagon() {
         super("This is a hexagonal shape");
     }
@@ -130,6 +132,7 @@ sealed abstract class Shape permits Circle, Triangle, FourSidedShape {
 
 // CLASS NEEDS TO BE FINAL [OR SEALED OR NON-SEALED]
 final class Circle extends Shape {
+
     public Circle() {
         super("This is a circle");
     }
@@ -137,6 +140,7 @@ final class Circle extends Shape {
 
 // CLASS NEEDS TO BE SEALED [OR FINAL OR NON-SEALED]
 sealed class Triangle extends Shape permits Equilateral, Isosceles, Scalene {
+
     public Triangle() {
         super("This is a circle");
     }
@@ -147,18 +151,21 @@ sealed class Triangle extends Shape permits Equilateral, Isosceles, Scalene {
 }
 
 final class Equilateral extends Triangle {
+
     public Equilateral() {
         super("Three sides of this triangle have same size");
     }
 }
 
 final class Isosceles extends Triangle {
+
     public Isosceles() {
         super("Two sides of this triangle have same size");
     }
 }
 
 final class Scalene extends Triangle {
+
     public Scalene() {
         super("No sides of this triangle have same size");
     }
@@ -166,6 +173,7 @@ final class Scalene extends Triangle {
 
 // CLASS NEEDS TO BE NON-SEALED [OR FINAL OR SEALED]
 non-sealed class FourSidedShape extends Shape {
+
     public FourSidedShape(String description) {
         super(description);
     }
@@ -188,6 +196,7 @@ class Rectangle extends FourSidedShape {
 }
 
 class Square extends Rectangle {
+
     public Square() {
         super("This is a square");
     }
@@ -197,6 +206,7 @@ class Square extends Rectangle {
 public class Example3Sealed {
 
     public static void main(String[] args) {
+
         NoExtensionShape noExtensionShape = new NoExtensionShape();
         System.out.println("\n1. Final NoExtension shape --->\n\t" + noExtensionShape.getDescription());
 

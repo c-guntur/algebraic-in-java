@@ -81,13 +81,37 @@ class Twin<T> {
 public class Example2Tuple {
 
     public static void main(String[] args) {
-        Pair<Integer, String> integerStringPair = new Pair<>(1, "One");
-        System.out.println("\n1. integerStringPair --->\n\t\t" + integerStringPair);
 
-        Pair<String, Boolean> stringBooleanPair = new Pair<>("TRUE", Boolean.TRUE);
-        System.out.println("\n2. stringBooleanPair --->\n\t\t" + stringBooleanPair);
+        Pair<Integer, String> integerStringPair = new Pair<>(1, "One");
+        System.out.println("\n1. integerStringPair --->\n\t\t" +
+                integerStringPair);
+
+        System.out.println("\n2. integerStringPair.getFirst() --->\n\t\t" +
+                integerStringPair.getFirst());
+
+        System.out.println("\n3. integerStringPair.getSecond() --->\n\t\t" +
+                integerStringPair.getSecond());
+
+
+        Pair<String, Boolean> stringBooleanPair = new Pair<>("aString", Boolean.TRUE);
+        System.out.println("\n4. stringBooleanPair --->\n\t\t" +
+                stringBooleanPair);
+
+        System.out.println("\n5. stringBooleanPair.getFirst() --->\n\t\t" +
+                stringBooleanPair.getFirst());
+
+        System.out.println("\n6. stringBooleanPair.getSecond() --->\n\t\t" +
+                stringBooleanPair.getSecond());
+
 
         Twin<String> stringTwin = new Twin<>("One", "Uno");
-        System.out.println("\n3. stringTwin --->\n\t\t" + stringTwin);
+        System.out.println("\n7. stringTwin --->\n\t\t" +
+                stringTwin);
+
+        System.out.println("\n8. stringTwin.getFirst() --->\n\t\t" +
+                stringTwin.getFirst());
+
+        System.out.println("\n9. stringTwin.getSecond() --->\n\t\t" +
+                stringTwin.getSecond());
     }
 }
