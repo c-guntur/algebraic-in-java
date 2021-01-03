@@ -88,7 +88,7 @@ Let us look at the two common types: product types (value holders) and sum types
 | Records in Java
 |===
 
-=== Related
+=== Related Patterns
 
 .Examples of patterns used in Algebraic Java
 |===
