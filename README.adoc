@@ -42,7 +42,7 @@ Let us look at the two common types: product types (value holders) and sum types
 | `Class`
 
 | `Optional`
-| Tuple (developer created)
+| Tuple (developer created/third party libraries)
 
 | `Sealed` types
 | `Records` (Java 14,15) Java 16
@@ -50,6 +50,41 @@ Let us look at the two common types: product types (value holders) and sum types
 |
 | `Visitor`
 |===
+
+== Examples
+=== Sum types
+
+.Examples of Sum Types
+|===
+| Example | Description
+
+| link:src/none/cgutils/algebraic/sum/Example1Enum.java[Example1Enum]
+| Enums in Java
+
+| link:src/none/cgutils/algebraic/sum/Example2Optional.java[Example2Optional]
+| Using Optional in Java
+
+| link:src/none/cgutils/algebraic/sum/Example3Sealed.java[Example3Sealed]
+| Sealed Types in Java
+|===
+
+
+=== Product Types
+
+.Examples of Product Types
+|===
+| Example | Description
+
+| link:src/none/cgutils/algebraic/product/Example1Class.java[Example1Class]
+| A Class in Java
+
+| link:src/none/cgutils/algebraic/product/Example2Tuple.java[Example2Tuple]
+| Tuples in Java
+
+| link:src/none/cgutils/algebraic/product/Example3Record.java[Example3Record]
+| Records in Java
+|===
+
 
 
 Analysis of values
