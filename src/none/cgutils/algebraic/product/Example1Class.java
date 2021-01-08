@@ -55,10 +55,13 @@ public class Example1Class {
 
     public static void main(String[] args) {
 
+        // NOTE: Creating an instance of a POJO (Plain Old Java Object).
+
         Pojo pojo = new Pojo("Hello World", 1, Boolean.TRUE);
         System.out.println("\n1. Pojo --->\n\t\t" +
                 pojo);
 
+        // NOTE: Pattern matching to check if the instance is of a certain type
         // PATTERN MATCHING
         System.out.println("\n2. pojo is type of Pojo using instanceof --->\n\t\t" +
                 (pojo instanceof Pojo));

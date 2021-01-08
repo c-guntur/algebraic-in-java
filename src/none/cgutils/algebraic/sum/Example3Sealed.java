@@ -207,41 +207,62 @@ public class Example3Sealed {
 
     public static void main(String[] args) {
 
+        // NOTE: A normal [final] class.
         NoExtensionShape noExtensionShape = new NoExtensionShape();
-        System.out.println("\n1. Final NoExtension shape --->\n\t" + noExtensionShape.getDescription());
+        System.out.println("\n1. Final NoExtension shape --->\n\t"
+                + noExtensionShape.getDescription());
 
+        // NOTE: A normal [open] class extending from an [abstract] class.
         Pentagon pentagon = new Pentagon();
-        System.out.println("\n2. Open Pentagon extended from AbstractShape  --->\n\t" + pentagon.getDescription());
+        System.out.println("\n2. Open Pentagon extended from AbstractShape  --->\n\t"
+                + pentagon.getDescription());
 
+        // NOTE: A normal [open] class.
         CustomShape customShape = new CustomShape();
-        System.out.println("\n3. Open CustomShape (extendable) --->\n\t" + customShape.getDescription());
+        System.out.println("\n3. Open CustomShape (extendable) --->\n\t"
+                + customShape.getDescription());
 
+        // NOTE: A normal [open] class extending from another [open] class.
         Hexagon hexagon = new Hexagon();
-        System.out.println("\n\t4. Open Hexagon extended from CustomShape --->\n\t\t" + hexagon.getDescription());
+        System.out.println("\n\t4. Open Hexagon extended from CustomShape --->\n\t\t"
+                + hexagon.getDescription());
 
+        // NOTE: A [final] class permitted by a [sealed] [abstract] class.
         Circle circle = new Circle();
-        System.out.println("\n5. Final Circle sealed via Shape --->\n\t" + circle.getDescription());
+        System.out.println("\n5. Final Circle sealed via Shape --->\n\t"
+                + circle.getDescription());
 
+        // NOTE: A [sealed] class [permit]ted by another [sealed] class.
         Triangle triangle = new Triangle();
-        System.out.println("\n6. Sealed Triangle sealed via Shape --->\n\t" + triangle.getDescription());
+        System.out.println("\n6. Sealed Triangle sealed via Shape --->\n\t"
+                + triangle.getDescription());
 
+        // NOTE: A [final] class [permit]ted by a [sealed] class which itself is [permit]ted
+        //  by another [sealed] class.
         Equilateral equilateral = new Equilateral();
-        System.out.println("\n\t7. Final Equilateral sealed via Triangle --->\n\t\t" + equilateral.getDescription());
-
+        System.out.println("\n\t7. Final Equilateral sealed via Triangle --->\n\t\t"
+                + equilateral.getDescription());
         Isosceles isosceles = new Isosceles();
-        System.out.println("\n\t8. Final Isosceles sealed via Triangle --->\n\t\t" + isosceles.getDescription());
-
+        System.out.println("\n\t8. Final Isosceles sealed via Triangle --->\n\t\t"
+                + isosceles.getDescription());
         Scalene scalene = new Scalene();
-        System.out.println("\n\t9. Final Scalene sealed via Triangle --->\n\t\t" + scalene.getDescription());
+        System.out.println("\n\t9. Final Scalene sealed via Triangle --->\n\t\t"
+                + scalene.getDescription());
 
+        // NOTE: A [non-sealed] class permitted by a [sealed] class.
         FourSidedShape fourSidedShape = new FourSidedShape();
-        System.out.println("\n10. Non-sealed extended from Sealed Shape --->\n\t" + fourSidedShape.getDescription());
+        System.out.println("\n10. Non-sealed extended from Sealed Shape --->\n\t"
+                + fourSidedShape.getDescription());
 
+        // NOTE: An [open] class extending from a [non-sealed] class.
         Rectangle rectangle = new Rectangle();
-        System.out.println("\n\t11. Open extended from Non-sealed FourSidedShape --->\n\t\t" + rectangle.getDescription());
+        System.out.println("\n\t11. Open extended from Non-sealed FourSidedShape --->\n\t\t"
+                + rectangle.getDescription());
 
+        // NOTE: An [open] class extending from an open class which itself is a [non-sealed] class.
         Square square = new Square();
-        System.out.println("\n\t\t12. Open extended from an Open Rectangle --->\n\t\t\t" + square.getDescription());
+        System.out.println("\n\t\t12. Open extended from an Open Rectangle --->\n\t\t\t"
+                + square.getDescription());
 
     }
 }

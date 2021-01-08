@@ -93,12 +93,17 @@ public class Example1Enum {
 
     public static void main(String[] args) {
 
+        // NOTE: Enums were introduced in Java 5.
+
+        // NOTE: Enums are a collection of final Singleton instances with an ordinal associated with
+        //  each value.
         // CREATE AN ENUM
         YearPartEnum yearPartEnum = YearPartEnum.Q1;
         System.out.println("1. Printing the toString, prints the name ---> \n\t\t" +
                 "yearPartEnum = " + yearPartEnum + "\n");
 
 
+        // NOTE: Enums can be compared with == operator, in fact Enum class equals() just does that.
         // CONDITIONAL CHECK ON ENUM
         if (YearPartEnum.Q1 == yearPartEnum) {
             System.out.println("2. Equating using an '==' operator --->\n\t\t" +
@@ -106,6 +111,7 @@ public class Example1Enum {
         }
 
 
+        // NOTE: Here is a switch-case example for an enum.
         // CONDITIONAL SWITCH-CASE ON ENUM
         System.out.print("3. Conditional switch-case uses enum directly ---> \n\t\t");
         switch (yearPartEnum) {
@@ -117,6 +123,7 @@ public class Example1Enum {
         System.out.println("\n");
 
 
+        // NOTE: One can iterate over enum values using the values() method.
         // ITERATING OVER ALL ENUM VALUES
         System.out.print("4. Iterating over an enum for all its values ---> \n\t\t");
         for (YearPartEnum yearPartEnum1 : YearPartEnum.values()) {
@@ -125,6 +132,8 @@ public class Example1Enum {
         System.out.println("\n");
 
 
+        // NOTE: Enums can be set using string equivalents via the valueOf() method.
+        //  Two formats are possible.
         // DERIVE ENUMS FROM STRINGS
         yearPartEnum = YearPartEnum.valueOf("Q2");
         System.out.println("5. Enums can be derived from Strings using a valueOf() " +
@@ -134,7 +143,7 @@ public class Example1Enum {
         System.out.println("6. Enums can be derived from Strings using a valueOf() " +
                 "on the Enum.class  ---> \n\t\tyearPartEnum = " + yearPartEnum);
 
-
+        // NOTE: Enums can define abstract methods that are implemented in each enum instance.
         // ABSTRACT METHODS IN ENUMS
         UsingAbstractMethods abstractMethods = UsingAbstractMethods.THREE;
         System.out.println("\n7. abstractMethods enum value  ---> \n\t\t" +
@@ -146,7 +155,7 @@ public class Example1Enum {
         System.out.println("\n10. Get the ordinal value  ---> \n\t\t" +
                 "The ordinal value of this enum is: " + abstractMethods.ordinal());
 
-
+        // NOTE: Enums can also implement interfaces as seen here.
         // INTERFACE IMPLEMENTATION IN ENUMS
         // (Extension of class or interface is not allowed).
         EnumWithInterface enumWithInterface = EnumWithInterface.SIX;
@@ -159,7 +168,7 @@ public class Example1Enum {
         System.out.println("\n14. Get the ordinal value  ---> \n\t\t" +
                 "The ordinal value of this enum is: " + enumWithInterface.ordinal());
 
-
+        // NOTE: Enums can be subset into an EnumSet.
         // ENUMSET
         EnumSet<EnumWithInterface> fourAndFive =
                 EnumSet.of(EnumWithInterface.FOUR, EnumWithInterface.FIVE);
@@ -167,7 +176,7 @@ public class Example1Enum {
         fourAndFive.forEach(obj -> System.out.print("\n\t\t\t" + obj));
         System.out.print("\n\t\t]\n");
 
-
+        // NOTE: Enums can be mapped into EnumMaps as well.
         // ENUMMAP
         EnumMap<UsingAbstractMethods, String> romanNumeralMap =
                 new EnumMap<>(UsingAbstractMethods.class);
@@ -179,7 +188,7 @@ public class Example1Enum {
                 System.out.print("\n\t\t\t" + key + ": " + value));
         System.out.println("\n\t\t]\n");
 
-
+        // NOTE: Finally, pattern matching on enums can take a few forms, with one gotcha!
         // PATTERN MATCHING
         // The Class.isEnum() does not work if enums have a body !!!
         // Ue instanceof or Class.isAssignableFrom()

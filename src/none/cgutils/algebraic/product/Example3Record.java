@@ -3,10 +3,6 @@ package none.cgutils.algebraic.product;
 import java.util.Objects;
 
 /*
-IMPLICITLY FINAL
-CANNOT BE ABSTRACT
-IMMUTABLE (NO MUTATORS/SETTERS)
-
 JEPs:
     https://openjdk.java.net/jeps/359 (Java 14)
     https://openjdk.java.net/jeps/384 (Java 15)
@@ -22,6 +18,7 @@ record SimpleRecord(String stringValue, Integer integerValue) { }
 // COMPACT CONSTRUCTOR EXAMPLES
 record RecordWithCompactConstructorValidation(String stringValue, Integer integerValue) {
 
+    // NOTE: Notice the no-argument compact constructor.
     public RecordWithCompactConstructorValidation {
 
         Objects.requireNonNull(stringValue);
@@ -117,17 +114,26 @@ record Rectangle(int width, int height) implements Shape {
 }
 //----------------------------------------------------------------------------------------------
 
-
 public class Example3Record {
 
     public static void main(String[] args) {
 
+        // NOTE: java.lang.Record was introduced in Java 14 as a preview feature.
+        //  A second preview was introduced in Java 15, with an addition of local records.
+        //  IMPLICITLY FINAL
+        //  CANNOT BE ABSTRACT
+        //  IMMUTABLE (NO MUTATORS/SETTERS)
+
+        // CREATE A RECORD.
         SimpleRecord simpleRecord = new SimpleRecord("a string", 7);
         System.out.println("\n1. Simple Record --->\n\t\t" + simpleRecord+"\n");
+
+        // NOTE: Record accessors do not have a get prefix.
         // ACCESSORS DO NOT HAVE A get PREFIX
         System.out.println("2. Simple Record StringValue (simpleRecord.stringValue()): --->\n\t\t" +
                 simpleRecord.stringValue()+"\n");
 
+        // NOTE: Pattern matching to determine if the instance is indeed a Record.
         // PATTERN MATCHING
         System.out.println("3. Class.isRecord  --->\n\t\t" +
                 "simpleRecord is a Record? " +
@@ -141,12 +147,14 @@ public class Example3Record {
 
 
         //---------------------------------------------------------------------
+        // NOTE: Records have compact canonical constructors.
         // USING COMPACT CANONICAL CONSTRUCTORS
         RecordWithCompactConstructorValidation validRecord =
                 new RecordWithCompactConstructorValidation("s", -3);
         System.out.println("6. Valid record with validation check --->\n\t\t" +
                 "validRecord : " + validRecord + "\n");
 
+        // NOTE: Compact canonical constructors can be used for validation.
         try {
             // RECORD NOT CREATED
             RecordWithCompactConstructorValidation invalidRecord =
@@ -156,6 +164,7 @@ public class Example3Record {
                     "has a null value for a field that is checked for non-null\n");
         }
 
+        // NOTE: Other examples of validation.
         try {
             // RECORD NOT CREATED
             RecordWithCompactConstructorException exceptionCreatingRecord =
@@ -168,6 +177,8 @@ public class Example3Record {
 
 
         //---------------------------------------------------------------------
+        // NOTE: Records can have multiple constructors, but they have to call the full
+        //  constructor in turn.
         // USING RECORD WITH MULTIPLE CONSTRUCTORS
         RecordWithMultipleConstructors construstor1Record =
                 new RecordWithMultipleConstructors("s");
@@ -181,6 +192,7 @@ public class Example3Record {
 
 
         //---------------------------------------------------------------------
+        // NOTE: Records can implement an interface.
         // RECORDS IMPLEMENTING AN INTERFACE
         RecordImplementingAnInterface implementingAnInterface =
                 new RecordImplementingAnInterface("s", 7);
@@ -192,6 +204,7 @@ public class Example3Record {
 
 
         //---------------------------------------------------------------------
+        // NOTE: Record accessors can be overridden.
         // RECORDS ALLOW OVERRIDING THE ACCESSORS
         RecordOverridingAccessor overridingAccessor =
                 new RecordOverridingAccessor("string", 7);
@@ -201,6 +214,7 @@ public class Example3Record {
 
 
         //---------------------------------------------------------------------
+        // NOTE: Interoperability with sealed types is possible!
         // RECORDS WORK WELL WITH SEALED TYPES
         Triangle triangle = new Triangle(3, 4, 5);
         System.out.println("14. Using a sealed record --->\n\t\t" +
@@ -212,6 +226,7 @@ public class Example3Record {
 
 
         //---------------------------------------------------------------------
+        // NOTE: Local records.
         // LOCAL RECORDS - INTRODUCED IN JAVA 15
         record ItemCount(String item, int count) { }
         ItemCount apples = new ItemCount("Apples", 6);

@@ -82,6 +82,7 @@ public class Example2Tuple {
 
     public static void main(String[] args) {
 
+        // NOTE: Creating a Pair with an Integer and a String.
         Pair<Integer, String> integerStringPair = new Pair<>(1, "One");
         System.out.println("\n1. integerStringPair --->\n\t\t" +
                 integerStringPair);
@@ -93,6 +94,7 @@ public class Example2Tuple {
                 integerStringPair.getSecond());
 
 
+        // NOTE: Creating a Pair with a String and a Boolean.
         Pair<String, Boolean> stringBooleanPair = new Pair<>("aString", Boolean.TRUE);
         System.out.println("\n4. stringBooleanPair --->\n\t\t" +
                 stringBooleanPair);
@@ -104,6 +106,7 @@ public class Example2Tuple {
                 stringBooleanPair.getSecond());
 
 
+        // NOTE: Creating a Twin with String instances.
         Twin<String> stringTwin = new Twin<>("One", "Uno");
         System.out.println("\n7. stringTwin --->\n\t\t" +
                 stringTwin);
