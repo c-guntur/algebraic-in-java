@@ -133,25 +133,12 @@ public class Example3Record {
         System.out.println("2. Simple Record StringValue (simpleRecord.stringValue()): --->\n\t\t" +
                 simpleRecord.stringValue()+"\n");
 
-        // NOTE: Pattern matching to determine if the instance is indeed a Record.
-        // PATTERN MATCHING
-        System.out.println("3. Class.isRecord  --->\n\t\t" +
-                "simpleRecord is a Record? " +
-                simpleRecord.getClass().isRecord() + "\n");
-        System.out.println("4. Use instanceof for records --->\n\t\t" +
-                "simpleRecord is a Record? " +
-                (simpleRecord instanceof Record) + "\n");
-        System.out.println("5. Record.class.isAssignableFrom --->\n\t\t" +
-                "simpleRecord is a Record? " +
-                (Record.class.isAssignableFrom(simpleRecord.getClass())) + "\n");
-
-
         //---------------------------------------------------------------------
         // NOTE: Records have compact canonical constructors.
         // USING COMPACT CANONICAL CONSTRUCTORS
         RecordWithCompactConstructorValidation validRecord =
                 new RecordWithCompactConstructorValidation("s", -3);
-        System.out.println("6. Valid record with validation check --->\n\t\t" +
+        System.out.println("3. Valid record with validation check --->\n\t\t" +
                 "validRecord : " + validRecord + "\n");
 
         // NOTE: Compact canonical constructors can be used for validation.
@@ -160,7 +147,7 @@ public class Example3Record {
             RecordWithCompactConstructorValidation invalidRecord =
                     new RecordWithCompactConstructorValidation(null, -3);
         } catch (NullPointerException e) {
-            System.out.println("7. Invalid record with validation check --->\n\t\t" +
+            System.out.println("4. Invalid record with validation check --->\n\t\t" +
                     "has a null value for a field that is checked for non-null\n");
         }
 
@@ -170,7 +157,7 @@ public class Example3Record {
             RecordWithCompactConstructorException exceptionCreatingRecord =
                     new RecordWithCompactConstructorException("s", -3);
         } catch (ExampleCustomException e) {
-            System.out.println("8. Record creation throws exception with validation check --->\n\t\t" +
+            System.out.println("5. Record creation throws exception with validation check --->\n\t\t" +
                     e.getMessage() +"\n");
         }
         //---------------------------------------------------------------------
@@ -182,11 +169,11 @@ public class Example3Record {
         // USING RECORD WITH MULTIPLE CONSTRUCTORS
         RecordWithMultipleConstructors construstor1Record =
                 new RecordWithMultipleConstructors("s");
-        System.out.println("9. Using a partial constructor --->\n\t\t" +
+        System.out.println("6. Using a partial constructor --->\n\t\t" +
                 construstor1Record+"\n");
         RecordWithMultipleConstructors construstor2Record =
                 new RecordWithMultipleConstructors("s", 7);
-        System.out.println("10. Using a full constructor --->\n\t\t" +
+        System.out.println("7. Using a full constructor --->\n\t\t" +
                 construstor2Record+"\n");
         //---------------------------------------------------------------------
 
@@ -196,9 +183,9 @@ public class Example3Record {
         // RECORDS IMPLEMENTING AN INTERFACE
         RecordImplementingAnInterface implementingAnInterface =
                 new RecordImplementingAnInterface("s", 7);
-        System.out.println("11. Record implementing an interface --->\n\t\t" +
+        System.out.println("8. Record implementing an interface --->\n\t\t" +
                 implementingAnInterface+"\n");
-        System.out.println("12. Record interface method getDescription() --->\n\t\t" +
+        System.out.println("9. Record interface method getDescription() --->\n\t\t" +
                 implementingAnInterface.getDescription()+"\n");
         //---------------------------------------------------------------------
 
@@ -208,7 +195,7 @@ public class Example3Record {
         // RECORDS ALLOW OVERRIDING THE ACCESSORS
         RecordOverridingAccessor overridingAccessor =
                 new RecordOverridingAccessor("string", 7);
-        System.out.println("13. Record overriding a field accessor, stringValue() --->\n\t\t" +
+        System.out.println("10. Record overriding a field accessor, stringValue() --->\n\t\t" +
                 overridingAccessor.stringValue()+"\n");
         //---------------------------------------------------------------------
 
@@ -217,10 +204,10 @@ public class Example3Record {
         // NOTE: Interoperability with sealed types is possible!
         // RECORDS WORK WELL WITH SEALED TYPES
         Triangle triangle = new Triangle(3, 4, 5);
-        System.out.println("14. Using a sealed record --->\n\t\t" +
+        System.out.println("11. Using a sealed record --->\n\t\t" +
                 triangle+"\n");
         Rectangle rectangle = new Rectangle(4, 9);
-        System.out.println("15. Using a sealed record --->\n\t\t" +
+        System.out.println("12. Using a sealed record --->\n\t\t" +
                 rectangle+"\n");
         //---------------------------------------------------------------------
 
@@ -231,10 +218,23 @@ public class Example3Record {
         record ItemCount(String item, int count) { }
         ItemCount apples = new ItemCount("Apples", 6);
         ItemCount bananas = new ItemCount("Bananas", 12);
-        System.out.println("16. Using a local record --->\n\t\t" +
+        System.out.println("13. Using a local record --->\n\t\t" +
                 apples+"\n");
-        System.out.println("17. Using a local record --->\n\t\t" +
+        System.out.println("14. Using a local record --->\n\t\t" +
                 bananas+"\n");
+
         //---------------------------------------------------------------------
+        // NOTE: Pattern matching to determine if the instance is indeed a Record.
+        // PATTERN MATCHING
+        System.out.println("15. Class.isRecord  --->\n\t\t" +
+                "simpleRecord is a Record? " +
+                simpleRecord.getClass().isRecord() + "\n");
+        System.out.println("16. Use instanceof for records --->\n\t\t" +
+                "simpleRecord is a Record? " +
+                (simpleRecord instanceof Record) + "\n");
+        System.out.println("17. Record.class.isAssignableFrom --->\n\t\t" +
+                "simpleRecord is a Record? " +
+                (Record.class.isAssignableFrom(simpleRecord.getClass())) + "\n");
+
     }
 }

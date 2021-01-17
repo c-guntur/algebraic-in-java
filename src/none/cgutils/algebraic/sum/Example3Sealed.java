@@ -207,6 +207,14 @@ public class Example3Sealed {
 
     public static void main(String[] args) {
 
+        // NOTE: The sealed type was introduced as a preview in Java 15.
+        // NOTE: Non-access modifiers for types:
+        //  <none> (open)
+        //  final
+        //  abstract
+        //  sealed
+        //  non-sealed
+
         // NOTE: A normal [final] class.
         NoExtensionShape noExtensionShape = new NoExtensionShape();
         System.out.println("\n1. Final NoExtension shape --->\n\t"
@@ -263,6 +271,16 @@ public class Example3Sealed {
         Square square = new Square();
         System.out.println("\n\t\t12. Open extended from an Open Rectangle --->\n\t\t\t"
                 + square.getDescription());
+
+
+        // NOTE: Pattern matching is similar to any other Java object.
+        if (square instanceof Shape) {
+            System.out.println("\n\t13. Square is a shape --->\n\t\t\t");
+        }
+
+        if (Shape.class.isAssignableFrom(square.getClass())) {
+            System.out.println("\n\t13a. Square is a shape --->\n\t\t\t");
+        }
 
     }
 }

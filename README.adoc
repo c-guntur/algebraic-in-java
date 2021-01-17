@@ -3,18 +3,20 @@
 
 image:assets/images/AlgebraicInJava.png[Duke with Green Board,640,398]
 
-Algebraic data types were introduced in Hope, a small functional programming language developed in the 1970s at the University of Edinburgh.
+Algebraic data types (ADTs) were introduced in Hope, a small functional programming language developed in the 1970s at the University of Edinburgh.
 
-*Algebraic* refers to the property that an Algebraic Data Type is created by algebraic operations. The algebra here, is *_sums_* and *_products_*:
+*Algebraic* refers to the property that an ADT is created by algebraic operations. The algebra here, is *_sums_*, *_products_* and *_patterns_*:
 
-*sum*:: alternation (A | B, meaning A or B but not both)
-*product*:: combination (A B, meaning A and B together)
+*sum*:: alternation (for three values A, B, C → A or B or C but not any combination or other subset).
+*product*:: combination (for three values A, B, C → A and B and C, possible to hold empty for one or more).
 
-Algebraic data types are also known as *_composite types_* - a type formed by combining other types
+Algebraic data types are also known as *_composite types_* - a type formed by combining other types.
+
+Algebraic data types (ADTs) can be identified and analyzed using *_Pattern Matching_*.
 
 == A deeper look at Sum and Product types
 
-Let us look at the two common types: product types (value holders) and sum types (variant types).
+Let us look at the two common types: sum types and product types.
 
 === Values of algebraic types
 
@@ -100,10 +102,6 @@ Let us look at the two common types: product types (value holders) and sum types
 | A walk-through of the visitor pattern
 |===
 
-== Analysis
-
-ADTs are analyzed via Pattern Matching.
-
 == Project Structure
 ----
 |____LICENSE
@@ -120,6 +118,8 @@ ADTs are analyzed via Pattern Matching.
 ----
 
 == Further reading
+
+link:https://cguntur.me/2021/01/12/algebraic-in-java-part-1/[Chandra's Blog Algebraic Data Types - Part 1]
 
 link:https://cr.openjdk.java.net/~briangoetz/amber/datum.html[Brian Goetz's Thoughts on Datum]
 

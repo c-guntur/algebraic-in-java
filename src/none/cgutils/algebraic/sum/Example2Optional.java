@@ -16,16 +16,10 @@ public class Example2Optional {
         // CREATE AN EMPTY OPTIONAL
         Optional<String> optionalEmptyString = Optional.empty();
 
-        // NOTE: Pattern matching to determine if the instance is indeed an Optional.
-        // INSTANCEOF PATTERN MATCHING
-        if (optionalEmptyString instanceof Optional) {
-            System.out.println("\n1. Pattern matching --->\n\tThis is an optional!");
-        }
-
         // NOTE: Check if the Optional is empty.
         // CHECK IF THE OPTIONAL IS EMPTY
         if (optionalEmptyString.isEmpty()) {
-            System.out.println("\n2. Empty optional --->\n\tThis is an empty optional!");
+            System.out.println("\n1. Empty optional --->\n\tThis is an empty optional!");
         }
 
         // NOTE: Create an Optional for a non-null value.
@@ -35,7 +29,7 @@ public class Example2Optional {
         // NOTE: Get the value of the Optional: Use get() with caution!
         // GET THE VALUE
         // Generally a bad idea to use get(), defeats the purpose of the Optional container.
-        System.out.println("\n3. Value of optional exists --->\n\tValue: " +
+        System.out.println("\n2. Value of optional exists --->\n\tValue: " +
                 integerOptional.get());
 
         // NOTE: Create an Optional for a possible null value.
@@ -48,12 +42,12 @@ public class Example2Optional {
         // NOTE: Check if the Optional has a non-null value.
         // CHECK IF A VALUE EXISTS
         if (integerNullableOptional.isPresent()) {
-            System.out.println("\n4. Value of nullable optional exists --->\n\tValue: " +
+            System.out.println("\n3. Value of nullable optional exists --->\n\tValue: " +
                     integerNullableOptional.get());
         }
         // AS A LAMBDA
         integerNullableOptional.ifPresent(integer -> System.out.println(
-                "\n4a. Value of nullable optional exists --->\n\tValue: " +
+                "\n3a. Value of nullable optional exists --->\n\tValue: " +
                 integer));
 
         // NOTE: How null values can be handled when extracted from the Optional.
@@ -61,17 +55,17 @@ public class Example2Optional {
         // ALTERNATE VALUE WHEN VALUE IS EMPTY (NULL) USING A SUPPLIER
         integerNullableOptional = Optional.ofNullable(nullInteger);
         System.out.println(
-                "\n5. Alternate value of nullable optional using or() then get() --->\n\tValue: " +
+                "\n4. Alternate value of nullable optional using or() then get() --->\n\tValue: " +
                         integerNullableOptional.or(() -> Optional.of(-1)).get());
 
         // ALTERNATE VALUE WHEN VALUE IS EMPTY (NULL) USING A SUPPLIER
         System.out.println(
-                "\n6. Alternate value of nullable optional using orElseGet() --->\n\tValue: " +
+                "\n5. Alternate value of nullable optional using orElseGet() --->\n\tValue: " +
                         integerNullableOptional.orElseGet(() -> -1));
 
         // ALTERNATE VALUE WHEN VALUE IS EMPTY (NULL) USING AN ALTERNATE VALUE
         System.out.println(
-                "\n7. Alternate value of nullable optional using orElse() --->\n\tValue: " +
+                "\n6. Alternate value of nullable optional using orElse() --->\n\tValue: " +
                         integerNullableOptional.orElse(-1));
 
         // NOTE: Throwing exceptions if the Optional is empty.
@@ -82,7 +76,7 @@ public class Example2Optional {
             Integer nonNullInteger = integerNullableOptional.orElseThrow(exceptionSupplier);
         } catch (RuntimeException e) {
             System.out.println(
-                    "\n8. Exception thrown when using an orElseThrow() on an empty optional --->\n\t" +
+                    "\n7. Exception thrown when using an orElseThrow() on an empty optional --->\n\t" +
                             "This should print!");
         }
 
@@ -90,16 +84,26 @@ public class Example2Optional {
         // PERFORM CONSUMER ACTION BASED ON VALUE BEING NON-NULL OR A RUNNABLE IF NULL
         Consumer<Integer> nonEmptyValueAction =
                 x -> System.out.println(
-                        "\n9. Consumer action for non-null value optional --->\n\t " +
+                        "\n8. Consumer action for non-null value optional --->\n\t " +
                                 "This is a non-null integer value: " + x);
 
         Runnable emptyValueRunnable =
                 () -> System.out.println(
-                        "\n10. Runnable action for null value optional --->\n\t " +
+                        "\n9. Runnable action for null value optional --->\n\t " +
                                 "This is a null integer value");
 
         integerOptional.ifPresentOrElse(nonEmptyValueAction, emptyValueRunnable);
 
         integerNullableOptional.ifPresentOrElse(nonEmptyValueAction, emptyValueRunnable);
+
+        // NOTE: Pattern matching to determine if the instance is indeed an Optional.
+        // INSTANCEOF PATTERN MATCHING
+        if (optionalEmptyString instanceof Optional) {
+            System.out.println("\n10. Pattern matching instanceof --->\n\tThis is an optional!");
+        }
+        if(Optional.class.isAssignableFrom(optionalEmptyString.getClass())) {
+            System.out.println("\n10a. Pattern matching Class.isAssignableFrom --->\n\tThis is an optional!");
+        }
+
     }
 }

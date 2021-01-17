@@ -93,7 +93,7 @@ public class Example1Enum {
 
     public static void main(String[] args) {
 
-        // NOTE: Enums were introduced in Java 5.
+        // NOTE: java.lang.Enum was introduced in Java 5.
 
         // NOTE: Enums are a collection of final Singleton instances with an ordinal associated with
         //  each value.
