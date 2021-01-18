@@ -37,11 +37,7 @@ Let us look at the two common types: sum types and product types.
 | Each variant can have its own constructor with specified number of arguments
 | Contains several values of possibly different types themselves
 
-| Special examples
-| Enums (Enumerations) are a special sum type with a zero-argument constructor
-| Recursive types are a special product type
-
-.4+| Other examples
+.4+| Examples
 
 | `Enums` (additional data cannot be associated with an enum, once created)
 | `Class`

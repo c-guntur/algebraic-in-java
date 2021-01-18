@@ -69,7 +69,7 @@ abstract class AbstractShape {
 class Pentagon extends AbstractShape {
 
     public Pentagon() {
-        super("This is a hexagonal shape");
+        super("This is a pentagon shape");
     }
 
     public Pentagon(String description) {
@@ -126,9 +126,21 @@ sealed abstract class Shape permits Circle, Triangle, FourSidedShape {
     }
 
     String getDescription() {
-        return "This is an abstract sealed shape";
+        return description;
     }
 }
+
+//class Octagon extends Shape {
+//
+//    public Octagon(String description) {
+//        this.description = description;
+//    }
+//
+//    @Override
+//    String getDescription() {
+//        return "This is not valid";
+//    }
+//}
 
 // CLASS NEEDS TO BE FINAL [OR SEALED OR NON-SEALED]
 final class Circle extends Shape {
@@ -142,7 +154,7 @@ final class Circle extends Shape {
 sealed class Triangle extends Shape permits Equilateral, Isosceles, Scalene {
 
     public Triangle() {
-        super("This is a circle");
+        super("This is a triangle");
     }
 
     public Triangle(String description) {
@@ -183,7 +195,7 @@ non-sealed class FourSidedShape extends Shape {
     }
 }
 
-// NON-SEALED IS N OPEN CLASS
+// NON-SEALED IS AN OPEN CLASS
 class Rectangle extends FourSidedShape {
 
     public Rectangle(String description) {
@@ -200,6 +212,10 @@ class Square extends Rectangle {
     public Square() {
         super("This is a square");
     }
+
+//    String getDescription() {
+//        return "This is a square";
+//    }
 }
 //----------------------------------------------------------------------------------------------
 

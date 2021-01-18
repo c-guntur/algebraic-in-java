@@ -9,10 +9,10 @@ enum YearPartEnum {
 
     // If the enum contains fields and/or methods,
     // the list of enum constants must be terminated by a semicolon ';'
-    Q1("Quarter 1"),
-    Q2("Quarter 2"),
-    Q3("Quarter 3"),
-    Q4("Quarter 4");
+    Q1("Quarter 1"), // This is a value, with name = Q1 and ordinal = 0
+    Q2("Quarter 2"), // This is a value, with name = Q2 and ordinal = 1
+    Q3("Quarter 3"), // This is a value, with name = Q3 and ordinal = 2
+    Q4("Quarter 4"); // This is a value, with name = Q4 and ordinal = 3
 
     // If the enum contains fields and/or methods,
     // these need to be defined AFTER the list of enum constants
@@ -107,7 +107,7 @@ public class Example1Enum {
         // CONDITIONAL CHECK ON ENUM
         if (YearPartEnum.Q1 == yearPartEnum) {
             System.out.println("2. Equating using an '==' operator --->\n\t\t" +
-                    "This is the second quarter !!\n");
+                    "This is the first quarter !!\n");
         }
 
 
@@ -124,6 +124,7 @@ public class Example1Enum {
 
 
         // NOTE: One can iterate over enum values using the values() method.
+        //  This method is added by the compiler.
         // ITERATING OVER ALL ENUM VALUES
         System.out.print("4. Iterating over an enum for all its values ---> \n\t\t");
         for (YearPartEnum yearPartEnum1 : YearPartEnum.values()) {

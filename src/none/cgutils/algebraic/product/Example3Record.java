@@ -167,14 +167,14 @@ public class Example3Record {
         // NOTE: Records can have multiple constructors, but they have to call the full
         //  constructor in turn.
         // USING RECORD WITH MULTIPLE CONSTRUCTORS
-        RecordWithMultipleConstructors construstor1Record =
+        RecordWithMultipleConstructors constructor1Record =
                 new RecordWithMultipleConstructors("s");
         System.out.println("6. Using a partial constructor --->\n\t\t" +
-                construstor1Record+"\n");
-        RecordWithMultipleConstructors construstor2Record =
+                constructor1Record+"\n");
+        RecordWithMultipleConstructors constructor2Record =
                 new RecordWithMultipleConstructors("s", 7);
         System.out.println("7. Using a full constructor --->\n\t\t" +
-                construstor2Record+"\n");
+                constructor2Record+"\n");
         //---------------------------------------------------------------------
 
 
