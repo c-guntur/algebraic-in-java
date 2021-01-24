@@ -236,5 +236,20 @@ public class Example3Record {
                 "simpleRecord is a Record? " +
                 (Record.class.isAssignableFrom(simpleRecord.getClass())) + "\n");
 
+        // NOTE: Modern shortcut pattern matching
+        // Introduced in Java 14 as a preview
+        // Second preview in Java 15
+        // Intended to the a final feature in Java 16
+        if (simpleRecord instanceof Record aRecord) {
+            // can use aRecord here
+            System.out.println("18. simpleRecord is indeed a record --->\n\t\t" +
+                    "Pattern matched aRecord is of type: " +
+                    aRecord.getClass().getCanonicalName() + "\n");
+        } else {
+            // can't use aRecord here
+            System.out.println("This should not print --->\n\t\t" +
+                    "aRecord is not resolvable in this block.\n");
+        }
+
     }
 }

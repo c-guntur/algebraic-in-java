@@ -1,5 +1,7 @@
 package none.cgutils.algebraic.sum;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
@@ -102,8 +104,24 @@ public class Example2Optional {
             System.out.println("\n10. Pattern matching instanceof --->\n\tThis is an optional!");
         }
         if(Optional.class.isAssignableFrom(optionalEmptyString.getClass())) {
-            System.out.println("\n10a. Pattern matching Class.isAssignableFrom --->\n\tThis is an optional!");
+            System.out.println("\n10a. Pattern matching Class.isAssignableFrom --->\n\tThis is an optional!\n");
         }
 
+        // NOTE: Modern shortcut pattern matching
+        // Introduced in Java 14 as a preview
+        // Second preview in Java 15
+        // Intended to the a final feature in Java 16
+        if (integerOptional instanceof Optional anOptional) {
+            // can use anOptional here
+            Type superclass = integerOptional.getClass().getGenericSuperclass();
+
+            System.out.println("11. integerOptional is indeed an Optional --->\n\t\t" +
+                    "Pattern matched anOptional is of type: " +
+                    anOptional.getClass().getCanonicalName() + "\n");
+        } else {
+            // can't use anOptional here
+            System.out.println("This should not print --->\n\t\t" +
+                    "anOptional is not resolvable in this block.\n");
+        }
     }
 }

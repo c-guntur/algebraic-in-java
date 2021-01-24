@@ -205,6 +205,21 @@ public class Example1Enum {
                 (abstractMethods instanceof Enum) + "\n");
         System.out.println("21. Enum.class.isAssignableFrom is another way to test --->\n\t\t" +
                 "abstractMethods is an enum? " +
-                (Enum.class.isAssignableFrom(abstractMethods.getClass())));
+                (Enum.class.isAssignableFrom(abstractMethods.getClass())) + "\n");
+
+        // NOTE: Modern shortcut pattern matching
+        // Introduced in Java 14 as a preview
+        // Second preview in Java 15
+        // Intended to the a final feature in Java 16
+        if (yearPartEnum instanceof Enum anEnum) {
+            // can use anEnum here
+            System.out.println("22. yearPartEnum is indeed an enum --->\n\t\t" +
+                    "Pattern matched anEnum is of type: " +
+                    anEnum.getClass().getCanonicalName() + "\n");
+        } else {
+            // can't use anEnum here
+            System.out.println("This should not print --->\n\t\t" +
+                    "anEnum is not resolvable in this block.\n");
+        }
     }
 }
