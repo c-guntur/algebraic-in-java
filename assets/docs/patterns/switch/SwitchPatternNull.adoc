@@ -1,0 +1,32 @@
+= image:../../../images/Switch.png[Array, 35, 35] Handling Null in Switch Pattern Matching
+:icons: font
+
+* Currently, a `null` check needs to be evaluated ahead of the switch to avoid `NullPointerException` to be thrown.
+
+* With a proposed addition of `case`-labels accepting type patterns, null checks possible in the `switch`-`case` block.
+
+[source, java, linenums, highlight=3..3]
+----
+static void testFooBar(String s) {
+    switch (s) {
+        case null         -> System.out.println("Oops");         // <1>
+        case "Foo", "Bar" -> System.out.println("Great");
+        default           -> System.out.println("Ok");
+    }
+}
+----
+<1> Null check can be possible inside the `switch` block!
+
+[NOTE]
+.Options with / without a `null` `case`-label
+===============================================================================
+• with a `case` `null`, the `switch` executes the code associated with that label. +
+• without a `case` `null`, the `switch` can throw `NullPointerException`, as it is expected to.
+===============================================================================
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:SwitchPatternMatch.adoc[◀️ Introduction to `switch`-`case` Pattern Matching]
+| link:../../Patterns.adoc[Patterns 🔼]
+| link:SwitchCaseLabelConditions.adoc[Condition Matching in a `switch` - `case` label{nbsp}▶️]
+|===

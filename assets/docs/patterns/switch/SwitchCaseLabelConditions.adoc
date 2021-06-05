@@ -1,0 +1,28 @@
+= image:../../../images/Switch.png[Array, 35, 35] Conditions in a switch - case label
+:icons: font
+
+* Possible introduction of conditions in `case` labels
+
+[source, java, linenums, highlight=3..3]
+----
+    static String formatterPatternSwitch(Object obj) {
+        return switch (obj) {
+            case Integer i && (i < 50) -> String.format("small int %d", i);  // <1>
+            case Integer i -> String.format("larger int %d", i);  // <2>
+            case Long l    -> String.format("long %d", l);
+            case Double d  -> String.format("double %f", d);
+            case String s  -> String.format("String %s", s);
+            default        -> o.toString();
+        };
+    }
+----
+
+<1> The `switch` expression returns after this case for int values `< 50`.
+<2> This `case` only reached if the integer value `>= 50`.
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:SwitchPatternNull.adoc[◀️ Handling Null in `switch`-`case` Pattern Matching]
+| link:../../Patterns.adoc[Patterns 🔼]
+| link:SwitchPatternMatchSpecialTypes.adoc[Special Types in `switch`-`case` Pattern Matching ▶️]
+|===

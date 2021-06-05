@@ -1,0 +1,36 @@
+= image:../../../images/Switch.png[Switch, 35, 35] Switch-Case Pattern Matching - Special Types
+:icons: font
+
+[source, java, linenums]
+----
+record Point(int i, int j) {}
+enum Color { RED, GREEN, BLUE; }
+sealed interface S permits A, B, C {}
+final class A implements S {}
+final class B implements S {}
+record C(int i) implements S {}  // Implicitly final
+
+static void typeTester(Object o) {
+    switch (o) {
+        case null     -> System.out.println("null");
+        case String s -> System.out.println("String");
+        case Color c  -> System.out.println("Color with " + c.name() );
+        case Point p  -> System.out.println("Record class: " + p.toString()); //<1>
+        case int[] ia -> System.out.println("int[] of length" + ia.length);//<2>
+        case A a      -> System.out.println("Sealed type A");// <3>
+        case B b      -> System.out.println("Sealed type B");
+        case C c      -> System.out.println("Sealed record type C");
+        default       -> System.out.println("Something else");
+    }
+}
+----
+<1> Records +
+<2> Arrays +
+<3> Sealed Types - in `switch`-`case` pattern matching.
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:SwitchCaseLabelConditions.adoc[◀️ Condition Matching in a `switch` - `case` label{nbsp}▶️]
+| link:../../Patterns.adoc[Patterns 🔼]
+| link:SwitchPatternMatchSummary.adoc[Summary of `switch`-`case` Pattern Matching ▶️]
+|===

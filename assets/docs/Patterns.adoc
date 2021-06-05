@@ -1,8 +1,8 @@
 = Java `instanceof` - Pattern Matching
 
-. The `instanceof` operator used to check the object's type
-. After two previews, Java 16 now has a final pattern-matching `instanceof`
-. Future releases of Java will potentially contain other exciting new features
+. The `instanceof` operator used to check the object's *Type Pattern*
+. After two previews, Java 16 now has a *Pattern Matching* `instanceof`
+. Future releases of Java will potentially contain other exciting new features!
 . Some proposed features include: +
  +
 image:../images/Switch.png[Switch, 50] link:patterns/switch/SwitchPatterns.adoc[`instanceof` in `switch`-`case` statements ▶️]  +
@@ -10,8 +10,6 @@ image:../images/Switch.png[Switch, 50] link:patterns/switch/SwitchPatterns.adoc[
 image:../images/Array.png[Arrays, 50] link:patterns/arrays/ArraysPatterns.adoc[`instanceof` for Arrays ▶️] +
  +
 image:../images/Record.png[Record, 50] link:patterns/records/RecordsPatterns.adoc[`instanceof` for Records ▶️]
-
-Let's see some *_possible_* future enhancements in Java.
 
 [caption=" ", .center, cols="<50%, >50%", width=95%, grid=none, frame=none]
 |===

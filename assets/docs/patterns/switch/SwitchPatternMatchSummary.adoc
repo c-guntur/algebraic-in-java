@@ -1,0 +1,20 @@
+= image:../../../images/Switch.png[Switch, 35, 35] Pattern Matching  for `switch` - `case`
+:icons: font
+
+Two new pattern matching possibilities have been discussed:
+
+Primary Pattern:: A `Type Pattern` to declare and provide a variable via the `instanceof`.
+
+Guarded Pattern:: A combination of a `Primary Pattern` && `Conditional Expression`
+* A *guarded pattern* is of the form `p && e`, +
+    where `p` is a pattern and `e` is a boolean expression.
+* In a guarded pattern any local variable, formal parameter, or exceptional parameter that is: +
+    _used but not declared in the subexpression_, must either be *final* or *effectively final*.
+* A guarded pattern is *_flow-sensitive_*, failure of the first part should prevent execution of the second.
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:SwitchPatternMatchSpecialTypes.adoc[◀️ Special Types in `switch`-`case` Pattern Matching]
+| link:../../Patterns.adoc[Patterns 🔼]
+| {nbsp}
+|===
