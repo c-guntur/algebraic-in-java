@@ -20,7 +20,7 @@
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
 |===
 | {nbsp}
-a| link:../../Patterns.adoc[Patterns 🔼]
-a| link:SwitchPatternNull.adoc[Switch-Case Null Pattern Matching ▶️]
+| link:00_SwitchCasePatternMatching.adoc[Switch Patterns 🔼]
+| link:02_HandlingNulls.adoc[Handling Nulls ▶️]
 |===
 

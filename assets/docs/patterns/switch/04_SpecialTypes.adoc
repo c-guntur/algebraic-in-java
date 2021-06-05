@@ -16,8 +16,8 @@ static void typeTester(Object o) {
         case String s -> System.out.println("String");
         case Color c  -> System.out.println("Color with " + c.name() );
         case Point p  -> System.out.println("Record class: " + p.toString()); //<1>
-        case int[] ia -> System.out.println("int[] of length" + ia.length);//<2>
-        case A a      -> System.out.println("Sealed type A");// <3>
+        case int[] ia -> System.out.println("int[] of length" + ia.length);   //<2>
+        case A a      -> System.out.println("Sealed type A");                 // <3>
         case B b      -> System.out.println("Sealed type B");
         case C c      -> System.out.println("Sealed record type C");
         default       -> System.out.println("Something else");
@@ -30,7 +30,7 @@ static void typeTester(Object o) {
 
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
 |===
-| link:SwitchCaseLabelConditions.adoc[◀️ Condition Matching in a `switch` - `case` label{nbsp}▶️]
-| link:../../Patterns.adoc[Patterns 🔼]
-| link:SwitchPatternMatchSummary.adoc[Summary of `switch`-`case` Pattern Matching ▶️]
+| link:03_CaseLabelConditions.adoc[◀️ Condition Matching]
+| link:00_SwitchCasePatternMatching.adoc[Switch Patterns 🔼]
+| link:05_Summary.adoc[Summary ▶️]
 |===

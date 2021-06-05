@@ -1,4 +1,4 @@
-= image:../../../images/Switch.png[Array, 35, 35] Handling Null in Switch Pattern Matching
+= image:../../../images/Switch.png[Switch, 35, 35] Handling Null in Switch Pattern Matching
 :icons: font
 
 * Currently, a `null` check needs to be evaluated ahead of the switch to avoid `NullPointerException` to be thrown.
@@ -26,7 +26,7 @@ static void testFooBar(String s) {
 
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
 |===
-| link:SwitchPatternMatch.adoc[◀️ Introduction to `switch`-`case` Pattern Matching]
-| link:../../Patterns.adoc[Patterns 🔼]
-| link:SwitchCaseLabelConditions.adoc[Condition Matching in a `switch` - `case` label{nbsp}▶️]
+| link:01_Introduction.adoc[◀️ Introduction]
+| link:00_SwitchCasePatternMatching.adoc[Switch Patterns 🔼]
+| link:03_CaseLabelConditions.adoc[Condition Matching ▶️]
 |===

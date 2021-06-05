@@ -1,4 +1,4 @@
-= image:../../../images/Switch.png[Array, 35, 35] Conditions in a switch - case label
+= image:../../../images/Switch.png[Switch, 35, 35] Conditions in a switch - case label
 :icons: font
 
 * Possible introduction of conditions in `case` labels
@@ -22,7 +22,7 @@
 
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
 |===
-| link:SwitchPatternNull.adoc[◀️ Handling Null in `switch`-`case` Pattern Matching]
-| link:../../Patterns.adoc[Patterns 🔼]
-| link:SwitchPatternMatchSpecialTypes.adoc[Special Types in `switch`-`case` Pattern Matching ▶️]
+| link:02_HandlingNulls.adoc[◀️ Handling Nulls]
+| link:00_SwitchCasePatternMatching.adoc[Switch Patterns 🔼]
+| link:04_SpecialTypes.adoc[Special Types ▶️]
 |===

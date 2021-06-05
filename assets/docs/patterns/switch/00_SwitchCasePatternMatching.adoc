@@ -1,0 +1,38 @@
+= Pattern Matching in `switch`-`case`
+
+//ifdef::env-github[]
+//++++
+//<p align="center">
+//  <img width="250" src="../../../images/Switch.png" alt="An electric switch">
+//</p>
+//++++
+//endif::[]
+//
+//ifndef::env-github[]
+//image::../../../images/Switch.png[Switch, 250, align=center]
+//endif::[]
+
+
+[width="100%", frame="none", grid="none", cols="4,6"]
+|===
+| {nbsp} | *Links*
+.5+| image:../../../images/Switch.png[Switch, 250, align=center, role="thumb"]
+| link:01_Introduction.adoc[Introduction ▶️]
+| link:02_HandlingNulls.adoc[Handling Nulls ▶️]
+| link:03_CaseLabelConditions.adoc[Condition Matching ▶️]
+| link:04_SpecialTypes.adoc[Special Types ▶️]
+| link:05_Summary.adoc[Summary ▶️]
+|===
+
+*JEP*: link:https://openjdk.java.net/jeps/406[_Java 17: JEP-406_]{nbsp}  {nbsp} (First Preview)
+
+*Ticket*: link:https://bugs.openjdk.java.net/browse/JDK-8213076[]
+
+'''
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| {nbsp}
+| link:../../Patterns.adoc[Patterns 🔼]
+| {nbsp}
+|===

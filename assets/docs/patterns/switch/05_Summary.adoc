@@ -14,7 +14,7 @@ Guarded Pattern:: A combination of a `Primary Pattern` && `Conditional Expressio
 
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
 |===
-| link:SwitchPatternMatchSpecialTypes.adoc[◀️ Special Types in `switch`-`case` Pattern Matching]
+| link:04_SpecialTypes.adoc[◀️ Special Types]
 | link:../../Patterns.adoc[Patterns 🔼]
 | {nbsp}
 |===
