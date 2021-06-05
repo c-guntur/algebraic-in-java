@@ -1,0 +1,13 @@
+= Pattern Matching in `switch`-`case`
+
+ifdef::env-github[]
+++++
+<p align="center">
+  <img width="250" src="../../../images/Switch.png" alt="An electric switch">
+</p>
+++++
+endif::[]
+
+ifndef::env-github[]
+image::../../../images/Switch.png[Switch, 250, align=center]
+endif::[]
