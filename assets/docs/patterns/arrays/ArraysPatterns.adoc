@@ -1,0 +1,13 @@
+= Pattern Matching in Arrays
+
+ifdef::env-github[]
+++++
+<p align="center">
+  <img width="250" src="../../../images/Array.png">
+</p>
+++++
+endif::[]
+
+ifndef::env-github[]
+image::../../../images/Array.png[Arrays, 250, align=center]
+endif::[]

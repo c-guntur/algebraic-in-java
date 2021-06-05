@@ -1,0 +1,13 @@
+= Pattern Matching in Records
+
+ifdef::env-github[]
+++++
+<p align="center">
+  <img width="250" src="../../../images/Record.png">
+</p>
+++++
+endif::[]
+
+ifndef::env-github[]
+image::../../../images/Record.png[Records, 250, align=center]
+endif::[]
