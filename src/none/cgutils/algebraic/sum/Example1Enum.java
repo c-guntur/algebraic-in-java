@@ -207,11 +207,12 @@ public class Example1Enum {
                 "abstractMethods is an enum? " +
                 (Enum.class.isAssignableFrom(abstractMethods.getClass())) + "\n");
 
+        Comparable myYearPartEnum = yearPartEnum;
         // NOTE: Modern shortcut pattern matching
         // Introduced in Java 14 as a preview
         // Second preview in Java 15
         // Intended to the a final feature in Java 16
-        if (yearPartEnum instanceof Enum anEnum) {
+        if (myYearPartEnum instanceof Enum anEnum) {
             // can use anEnum here
             System.out.println("22. yearPartEnum is indeed an enum --->\n\t\t" +
                     "Pattern matched anEnum is of type: " +

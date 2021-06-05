@@ -107,11 +107,12 @@ public class Example2Optional {
             System.out.println("\n10a. Pattern matching Class.isAssignableFrom --->\n\tThis is an optional!\n");
         }
 
+        Object myOptional = integerOptional;
         // NOTE: Modern shortcut pattern matching
         // Introduced in Java 14 as a preview
         // Second preview in Java 15
         // Intended to the a final feature in Java 16
-        if (integerOptional instanceof Optional anOptional) {
+        if (myOptional instanceof Optional anOptional) {
             // can use anOptional here
             Type superclass = integerOptional.getClass().getGenericSuperclass();
 

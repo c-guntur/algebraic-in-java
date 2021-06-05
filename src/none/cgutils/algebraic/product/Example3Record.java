@@ -97,7 +97,7 @@ sealed interface Shape
     String getDescription();
 }
 
-record Triangle(int side1Length, int side2Length, int side3Length) implements Shape {
+final record Triangle(int side1Length, int side2Length, int side3Length) implements Shape {
 
     @Override
     public String getDescription() {
@@ -105,7 +105,7 @@ record Triangle(int side1Length, int side2Length, int side3Length) implements Sh
     }
 }
 
-record Rectangle(int width, int height) implements Shape {
+final record Rectangle(int width, int height) implements Shape {
 
     @Override
     public String getDescription() {
@@ -236,11 +236,12 @@ public class Example3Record {
                 "simpleRecord is a Record? " +
                 (Record.class.isAssignableFrom(simpleRecord.getClass())) + "\n");
 
+        Object mySimpleRecord = simpleRecord;
         // NOTE: Modern shortcut pattern matching
         // Introduced in Java 14 as a preview
         // Second preview in Java 15
         // Intended to the a final feature in Java 16
-        if (simpleRecord instanceof Record aRecord) {
+        if (mySimpleRecord instanceof Record aRecord) {
             // can use aRecord here
             System.out.println("18. simpleRecord is indeed a record --->\n\t\t" +
                     "Pattern matched aRecord is of type: " +

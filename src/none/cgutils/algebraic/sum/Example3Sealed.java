@@ -298,11 +298,12 @@ public class Example3Sealed {
             System.out.println("\n\t13a. Square is a shape --->\n\t\t\t");
         }
 
+        Object mySquare = square;
         // NOTE: Modern shortcut pattern matching
         // Introduced in Java 14 as a preview
         // Second preview in Java 15
         // Intended to the a final feature in Java 16
-        if (square instanceof Shape aShape) {
+        if (mySquare instanceof Shape aShape) {
             // can use aShape here
             System.out.println("\n\t14. A square is indeed a Shape --->\n\t\t" +
                     "Pattern matched aShape is of type: " +

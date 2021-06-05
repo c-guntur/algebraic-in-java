@@ -81,11 +81,12 @@ public class Example1Class {
         System.out.println("\n7. pojo is type of Pojo using getSimpleName() --->\n\t\t" +
                 "Pojo".equals(pojo.getClass().getSimpleName()));
 
+        Object myPojo = pojo;
         // NOTE: Modern shortcut pattern matching
         // Introduced in Java 14 as a preview
         // Second preview in Java 15
         // Intended to the a final feature in Java 16
-        if (pojo instanceof Pojo aPojo) {
+        if (myPojo instanceof Pojo aPojo) {
             // can use aPojo here
             System.out.println("\n8. pojo is indeed a Pojo --->\n\t\t" +
                     "Pattern matched aPojo is of type: " +
