@@ -3,7 +3,7 @@
 
 * Possible introduction of conditions in `case` labels
 
-[source, java, linenums, highlight=3..3]
+[source, java, linenums, highlight=3..4]
 ----
     static String formatterPatternSwitch(Object obj) {
         return switch (obj) {

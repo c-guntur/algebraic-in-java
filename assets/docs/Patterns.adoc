@@ -1,17 +1,20 @@
 = Java `instanceof` - Pattern Matching
 
 . The `instanceof` operator used to check the object's *Type Pattern*
-. After two previews, Java 16 now has a *Pattern Matching* `instanceof`
-. Future releases of Java will potentially contain other exciting new features!
-. Some proposed features include: +
- +
-image:../images/Switch.png[Switch, 50] link:patterns/switch/SwitchPatterns.adoc[`instanceof` in `switch`-`case` statements ▶️]  +
- +
-image:../images/Array.png[Arrays, 50] link:patterns/arrays/ArraysPatterns.adoc[`instanceof` for Arrays ▶️] +
- +
-image:../images/Record.png[Record, 50] link:patterns/records/RecordsPatterns.adoc[`instanceof` for Records ▶️]
+. After two previews, Java 16 added a feature *Pattern Matching* `instanceof` +
+link:https://openjdk.java.net/jeps/305[_Java 14: JEP-305_],{nbsp}  {nbsp}
+link:https://openjdk.java.net/jeps/375[_Java 15: JEP-375_],{nbsp}  {nbsp}
+link:https://openjdk.java.net/jeps/394[*Java 16: JEP-394*]
 
-[caption=" ", .center, cols="<50%, >50%", width=95%, grid=none, frame=none]
+. Future releases of Java to potentially contain other exciting new features!
+. Some proposed features include: +
+
+[width="100%", frame="none", grid="none", cols="4,6"]
 |===
-|  {nbsp} | {nbsp}
+| {nbsp} | *Links*
+.4+| image:../images/AlgebraicInJava_PatternMatching.png["Pattern Matching", 350, align=center]
+| image:../images/Switch.png[Switch, 50, role="thumb"] link:patterns/switch/00_SwitchCasePatternMatching.adoc[Patterns for `switch`-`case` ▶️]
+| image:../images/Record.png[Record, 50, role="thumb"] link:patterns/records/00_RecordsPatternMatching.adoc[Patterns for Records ▶️]
+| image:../images/Array.png[Arrays, 50, role="thumb"] link:patterns/arrays/00_ArraysPatternMatching.adoc[Patterns for Arrays ▶️]
+| image:../images/OtherDetails.png["Other Details", 50, role="thumb"] link:patterns/other/00_OtherDetails.adoc[Other Details ▶️]
 |===
