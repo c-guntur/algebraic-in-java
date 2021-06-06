@@ -1,0 +1,19 @@
+= image:../images/AlgebraicInJava.png[Duke with Green Board,65] Algebraic data types
+
+Algebraic data types (ADTs) were introduced in *_Hope_* +
+{nbsp}{nbsp}{nbsp}{nbsp}• a small functional programming language +
+{nbsp}{nbsp}{nbsp}{nbsp}• developed in the 1970s at the University of Edinburgh.
+
+==== Algebra
+*Algebraic* refers to the property that an ADT is created by algebraic operations.
+
+Algebraic data types are also known as *_composite types_* - a type formed by combining other types.
+
+Algebraic data types (ADTs) can be identified and analyzed using *_Pattern Matching_*.
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| {nbsp}
+| link:../../README.adoc[README 🔼]
+| link:adt/00_AlgebraicDataTypes.adoc[Algebraic Data Types ▶️]
+|===

@@ -1,0 +1,22 @@
+= image:../../images/ADTs.png["Algebraic Data Types", 35, 35] Further reading
+
+link:https://cguntur.me/2021/01/12/algebraic-in-java-part-1/[Chandra's Blog Algebraic Data Types - Part 1] [.small]++(https://cguntur.me/2021/01/12/algebraic-in-java-part-1/)++
+
+link:https://cr.openjdk.java.net/~briangoetz/amber/datum.html[Brian Goetz's Thoughts on Datum] [.small]++(https://cr.openjdk.java.net/~briangoetz/amber/datum.html)++
+
+link:https://cr.openjdk.java.net/~briangoetz/amber/datum_2.html[An older version of Brian Goetz's Thoughts on Datum] [.small]++(https://cr.openjdk.java.net/~briangoetz/amber/datum_2.html)++
+
+link:https://en.wikipedia.org/wiki/Algebraic_data_type[Wikipedia Article on Algebraic Data Types] [.small]++(https://en.wikipedia.org/wiki/Algebraic_data_type)++
+
+link:https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html[Brian Goetz's Thoughts on Pattern Matching] [.small]++(https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html)++
+
+link:https://en.wikipedia.org/wiki/Pattern_matching[Wikipedia Article on Pattern Matching] [.small]++(https://en.wikipedia.org/wiki/Pattern_matching)++
+
+link:https://en.wikipedia.org/wiki/Catamorphism[Wikipedia Article on Catamorphism] [.small]++(https://en.wikipedia.org/wiki/Catamorphism)++
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:02_TabulatedExamples.adoc[◀️ Tabulated Examples]
+| link:../AlgebraicDataTypes.adoc[ADTs 🔼]
+| {nbsp}
+|===
