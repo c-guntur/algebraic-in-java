@@ -1,0 +1,31 @@
+= image:../../../images/Array.png[Arrays, 35, 35] Arrays Pattern Matching - Summary
+:icons: font
+
+* The array pattern matching works for both *single and multi-dimension arrays*.
+
+==== Grammar
+*Pattern*::
+TypePattern +
+ArrayPattern
+
+*TypePattern* - LocalVariableDeclaration
+
+*ArrayPattern*::
+ArrayType +
+ArrayComponentsPattern
+
+*ArrayComponentsPattern* - { [ ComponentPatternList [ , ...  ]  ] }
+
+*ComponentPatternList* - ComponentPattern { , ComponentPattern }
+
+*ComponentPattern*::
+Pattern +
+ArrayComponentsPattern
+
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:03_MultiDimensionArrays.adoc[◀️ Multi-Dimension Arrays]
+| link:00_ArraysPatternMatching.adoc[Arrays Patterns 🔼]
+| {nbsp}
+|===

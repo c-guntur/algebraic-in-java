@@ -1,0 +1,34 @@
+= image:../../../images/Array.png[Arrays, 35, 35] Arrays Pattern Matching
+:icons: font
+
+* Check if an `Object` is a `String` array, with at least two elements
+
+[source, java, line, linenums, highlight="7,9..11"]
+----
+String[] stringArray = {"Hello ", "World", "!!!"};
+
+. . .
+
+static void printFirstTwoStrings(Object o) {
+
+    if (o instanceof String[] sa && sa.length >= 2) { // <1>
+
+        String s1 = sa[0];
+        String s2 = sa[1];
+        System.out.println(s1 + s2);
+    }
+}
+----
+<1> *Type Pattern* for `String[]` and *Guarded Pattern* for length.
+
+[CAUTION]
+====
+Tedious to check the array length before extracting array components
+====
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| {nbsp}
+| link:00_ArraysPatternMatching.adoc[Arrays Patterns 🔼]
+| link:02_DeconstructingComponents.adoc[Deconstructing Components ▶️]
+|===

@@ -1,0 +1,38 @@
+= image:../../../images/Array.png[Arrays, 35, 35] Deconstructing Components
+:icons: font
+
+[source, java, line, linenums, highlight=4..5]
+----
+String[] stringArray = {"Hello ", "World", "!!!"};
+
+. . .
+
+static void printFirstTwoStrings(Object o) {
+    if (o instanceof String[] {               // <1>
+            String s1, String s2, ...         // <2>
+        }){
+
+        System.out.println(s1 + s2);
+    }
+}
+----
+<1> Checks for a `String[]` instance.
+<2> Ensures the *first two items* are non-`null` `String` instances, then *0 or more* other items.
+
+[WARNING]
+====
+A String array value would *only* match the pattern `String[] {String s1, String s2 }`, without the `...`, if it had exactly two elements.
+====
+
+[NOTE]
+====
+The `String[]` itself is not a named pattern (an *as pattern*). +
+More in appendix.
+====
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:01_Introduction.adoc[◀️ Introduction]
+| link:00_ArraysPatternMatching.adoc[Arrays Patterns 🔼]
+| link:03_MultiDimensionArrays.adoc[Multi-Dimension Arrays ▶️]
+|===

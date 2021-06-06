@@ -1,0 +1,28 @@
+= image:../../../images/Array.png[Arrays, 35, 35] Multi-Dimension Arrays
+:icons: font
+
+* Print the sum of the x co-ordinates of the first two points stored in an array:
+
+[source, java, line, linenums, highlight="4, 7"]
+----
+
+static void printSumOfFirstTwoXCoords(Object o) {
+
+    if (o instanceof Point[] {
+                Point(var x1, var y1), Point(var x2, var y2), ...             // <1>
+            }) {
+
+        System.out.println(x1 + x2);
+    }
+}
+----
+<1> Null checks are implicit.
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:02_DeconstructingComponents.adoc[◀️ Deconstructing Components]
+| link:00_ArraysPatternMatching.adoc[Arrays Patterns 🔼]
+| link:04_ArraysPatternMatchingSummary.adoc[Summary ▶️]
+|===
+
+
