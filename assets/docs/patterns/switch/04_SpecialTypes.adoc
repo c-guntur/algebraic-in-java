@@ -32,5 +32,5 @@ static void typeTester(Object o) {
 |===
 | link:03_CaseLabelConditions.adoc[◀️ Condition Matching]
 | link:00_SwitchCasePatternMatching.adoc[Switch Patterns 🔼]
-| link:05_Summary.adoc[Summary ▶️]
+| link:05_SwitchCasePatternMatchingSummary.adoc[Summary ▶️]
 |===

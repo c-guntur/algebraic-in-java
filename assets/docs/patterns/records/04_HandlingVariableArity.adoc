@@ -27,5 +27,5 @@ For example, given a MultiColoredPoint value, `m`:
 |===
 | link:03_NestedDeconstruction.adoc[◀️ Nested Deconstruction]
 | link:00_RecordsPatternMatching.adoc[Records Patterns 🔼]
-| link:05_RecordsPatternMatchSummary.adoc[Summary ▶️]
+| link:05_RecordsPatternMatchingSummary.adoc[Summary ▶️]
 |===
