@@ -1,9 +1,9 @@
-package none.cgutils.algebraic.other;
+package none.cgutils.algebraic.patterns;
 
-import static none.cgutils.algebraic.other.Book.BookType.*;
-import static none.cgutils.algebraic.other.Book.BookType.HARDCOVER;
-import static none.cgutils.algebraic.other.Movie.MovieType.BLUERAY;
-import static none.cgutils.algebraic.other.Movie.MovieType.DVD;
+import static none.cgutils.algebraic.patterns.Book.BookType.*;
+import static none.cgutils.algebraic.patterns.Book.BookType.HARDCOVER;
+import static none.cgutils.algebraic.patterns.Movie.MovieType.BLUERAY;
+import static none.cgutils.algebraic.patterns.Movie.MovieType.DVD;
 
 // Visitor interface
 interface EntertainmentVisitorInterface {
