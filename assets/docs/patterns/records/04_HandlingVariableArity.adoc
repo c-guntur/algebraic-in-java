@@ -1,0 +1,31 @@
+= image:../../../images/Record.png[Records, 35, 35] Handling Variable Arity
+:icons: font
+
+Record classes can have variable-arity record components, such as:
+
+[source, java, line, linenums, highlight=4..5]
+----
+record MultiColoredPoint(int i, int j, Color... cols) { }
+. . .
+var origin = new MultiColoredPoint(0, 0);
+var red = new MultiColoredPoint(1, 1, RED);
+var colorful = new MultiColoredPoint(2, 2, RED, GREEN);
+. . .
+----
+
+To support matching against variable-arity components, record patterns can be variable-arity. +
+For example, given a MultiColoredPoint value, `m`:
+
+* `m` matches the pattern ```MultiColoredPoint(var a, var b)``` +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}if `m` has an empty `cols` component
+* `m` matches the pattern ```MultiColoredPoint(var a, var b, var first)``` +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}if `m`’s `cols` component is an array with *exactly* one element
+* `m` matches the pattern ```MultiColoredPoint(var a, var b, var first, ...)``` +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}if `m`’s `cols` component is an array with *at least one* element
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:03_NestedDeconstruction.adoc[◀️ Nested Deconstruction]
+| link:00_RecordsPatternMatching.adoc[Records Patterns 🔼]
+| link:05_RecordsPatternMatchSummary.adoc[Summary ▶️]
+|===

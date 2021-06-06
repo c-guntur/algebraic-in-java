@@ -1,0 +1,28 @@
+= image:../../../images/Record.png[Records, 35, 35] Deconstructing Components
+:icons: font
+
+[source, java, line, linenums, highlight=4..5]
+----
+record Point(int x, int y) {}
+. . .
+void printSum(Object o) {
+    if (o instanceof Point(int x, int y)) {      //<1>
+        System.out.println(x + y);
+    }
+}
+----
+<1> A Point is deconstructed into its components `x` and `y`.
+
+In effect, a *record pattern* disaggregates an instance of a record into its components.
+
+[NOTE]
+Variable names are only introduced for the components `x` and `y`, not for the Point `p` itself. +
+More details in appendix.
+//TODO: Add appendix
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:01_Introduction.adoc[◀️ Introduction]
+| link:00_RecordsPatternMatching.adoc[Records Patterns 🔼]
+| link:03_NestedDeconstruction.adoc[Nested Deconstruction ▶️]
+|===

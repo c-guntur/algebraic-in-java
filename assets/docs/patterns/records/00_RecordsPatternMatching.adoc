@@ -1,0 +1,37 @@
+= Pattern Matching in Records
+
+//ifdef::env-github[]
+//++++
+//<p align="center">
+//  <img width="250" src="../../../images/Record.png">
+//</p>
+//++++
+//endif::[]
+//
+//ifndef::env-github[]
+//image::../../../images/Record.png[Records, 250, align=center]
+//endif::[]
+
+[width="100%", frame="none", grid="none", cols="4,6"]
+|===
+| {nbsp} | *Links*
+.5+| image:../../../images/Record.png[Records, 250, align=center, role="thumb"]
+| link:01_Introduction.adoc[Introduction ▶️]
+| link:02_DeconstructingComponents.adoc[Deconstructing Components ▶️]
+| link:03_NestedDeconstruction.adoc[Nested Deconstruction ▶️]
+| link:04_HandlingVariableArity.adoc[Handling Variable Arity ▶️]
+| link:05_RecordsPatternMatchSummary.adoc[Summary ▶️]
+|===
+
+*JEP*: link:https://openjdk.java.net/jeps/405[_Java 17: JEP-405_]{nbsp}  {nbsp} (First Preview)
+
+*Ticket*: link:https://bugs.openjdk.java.net/browse/JDK-8260244[]
+
+'''
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| {nbsp}
+| link:../../Patterns.adoc[Patterns 🔼]
+| {nbsp}
+|===

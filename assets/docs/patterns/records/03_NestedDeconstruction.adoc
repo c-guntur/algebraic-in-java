@@ -1,0 +1,36 @@
+= image:../../../images/Record.png[Records, 35, 35] Nested Deconstruction
+:icons: font
+
+The real power of pattern matching, however, is that it scales powerfully to match more complicated object graphs.
+
+[source, java, line, linenums, highlight=10..13]
+----
+record Point(int x, int y) {}
+enum Color { RED, GREEN, BLUE }
+record ColoredPoint(Point p, Color c) {}
+record Rectangle(ColoredPoint upperLeft, ColoredPoint lowerRight) {}
+
+. . .
+
+static void printXCoordOfUpperLeftPointWithPatterns(Rectangle r) {
+
+    if (r instanceof Rectangle(ColoredPoint(Point(var x, var y), var c), var lr)) { // <1>
+        System.out.println("Upper-left corner: " + x);
+        System.out.println("ColoredPoint color: " + c.name());
+        System.out.println("Lower right ColoredPoint: " + lr.toString());
+    }
+}
+----
+<1> Deconstructing a nested complex graph.
+
+[TIP]
+====
+Nulls don't match for `instanceof`. Null-checks are made redundant.
+====
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:02_DeconstructingComponents.adoc[◀️ Deconstructing Components]
+| link:00_RecordsPatternMatching.adoc[Records Patterns 🔼]
+| link:04_HandlingVariableArity.adoc[Handling Variable Arity ▶️]
+|===

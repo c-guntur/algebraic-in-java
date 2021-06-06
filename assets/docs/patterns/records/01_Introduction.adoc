@@ -1,0 +1,32 @@
+= image:../../../images/Record.png[Records, 35, 35] Records Pattern Matching
+:icons: font
+
+* Record classes (JEP 395) are transparent carriers for data
+
+* Code receiving an instance of a record class typically extracts the data, known as the components.
+
+* use a type pattern to test whether a value is an instance of the record class Point _and_ +
+{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp}{nbsp} _if so_, extract the `x` and `y` components from the value:
+
+[source, java, line, linenums, highlight=6..8]
+----
+record Point(int x, int y) {}
+
+. . .
+
+static void printSum(Object o) {
+    if (o instanceof Point p) {          //<1>
+        int x = p.x();
+        int y = p.y();
+        System.out.println(x+y);
+    }
+}
+----
+<1> The variable `p` is somewhat redundant — it is used solely to invoke the accessor methods `x()` and `y()`
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| {nbsp}
+| link:00_RecordsPatternMatching.adoc[Records Patterns 🔼]
+| link:02_DeconstructingComponents.adoc[Deconstructing Components ▶️]
+|===

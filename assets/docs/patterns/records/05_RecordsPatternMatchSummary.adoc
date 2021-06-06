@@ -1,0 +1,29 @@
+= image:../../../images/Record.png[Records, 35, 35] Records Pattern Matching - Summary
+:icons: font
+
+*Record patterns* promote a more declarative, null-safe, expression-oriented style of programming in Java.
+
+The real power of pattern matching, however, is that it *scales powerfully to match more complicated object graphs*.
+
+Pattern matching lets us *decompose objects without worrying about `null` or `NullPointerException`*.
+
+== Grammar
+*Pattern*::
+TypePattern +
+RecordPattern
+
+*TypePattern* - LocalVariableDeclaration
+
+*RecordPattern* - ReferenceType ( [ ArgumentPatternList ] [ , ... ] )
+
+*ArgumentPatternList* - ArgumentPattern { , ArgumentPattern }
+
+*ArgumentPattern* - Pattern
+
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:04_HandlingVariableArity.adoc[◀️ Handling Variable Arity]
+| link:00_RecordsPatternMatching.adoc[Records Patterns 🔼]
+| {nbsp}
+|===
