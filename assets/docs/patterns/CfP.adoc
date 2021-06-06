@@ -1,0 +1,56 @@
+= Algebraic in Java: Pattern Matching
+:toc:
+
+
+== Abstract
+Java started with basic pattern matching techniques, recent versions include more intricate ones! Pattern matching is not just limited to `instanceof` checks, there is a lot more, making Java Algebra-friendly & Functional!
+
+This talk is about the future of Java's Pattern Matching with code examples.
+
+== Description
+Pattern Matching - the ability to detect a pattern and use it to compute, calculate or extract other values.
+
+Previous versions of Java included a basic set of pattern matches, mostly relying on the developer to code the matches, the extraction or any other usage. Newer and upcoming versions of Java seem to bring in a lot more enhancements in this area and focus heavily on making Java more of a Functional-style language.
+
+This talk is on Pattern Matching present and future, and may include speculative changes which may not compile yet (or ever). The intent is to share some ideas on Pattern Matching, some code samples and discuss the benefits and importance of these new language additions to the language.
+
+== CFP Notes
+This session is intended to be completely driven from my IDE. The content will be very similar to an earlier presented talk on "Algebraic In Java - An Introduction", presented at Devnexus 2021 (link below). The talk at Devnexus was well-attended and was quite well-mentioned in social media as well.
+
+Unsure of the format, but if the talk is intended to be pre-recorded, the link to the code will be embedded in the video. If the format is to present live, the QR code will be embedded in the IDE for folk to checkout the GitHub project.
+
+There are no presentation slides for this session.
+
+*Time constraint*: I will need two weeks before the event, to get the approvals at work to present (not an issue, it is just the standard time needed to get approvals).
+
+*Link to related previous talk*: https://www.youtube.com/watch?v=UFdzu2BiP1s
+
+
+== Links
+JEP-305:: JDK 14:: Pattern matching for instanceof (first preview)
+https://bugs.openjdk.java.net/browse/JDK-8181287
+
+JEP-375:: JDK 15:: Pattern matching for instanceof (second preview)
+https://bugs.openjdk.java.net/browse/JDK-8235186
+
+JEP-394:: JDK 16:: Pattern matching for instanceof (Final)
+https://bugs.openjdk.java.net/browse/JDK-8250623
+
+
+JEP-406:: JDK 17:: Pattern matching for switch (first preview)
+https://bugs.openjdk.java.net/browse/JDK-8213076
+
+JEP-405:: JDK 17:: Record Patterns & Array Patterns
+https://bugs.openjdk.java.net/browse/JDK-8260244
+
+
+https://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html
+
+https://mail.openjdk.java.net/pipermail/amber-dev/2021-January/006917.html
+
+https://nipafx.dev/java-pattern-matching/
+https://nipafx.dev/jdk-news-1/#destructuring-patterns-in-for-each-loops
+
+https://www.infoq.com/articles/java-pattern-matching/
+
+https://www.youtube.com/watch?v=QmnJygpnrSQ

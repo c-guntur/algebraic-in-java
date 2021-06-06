@@ -10,7 +10,7 @@ link:https://openjdk.java.net/jeps/394[*Java 16: JEP-394*]
 [width="100%", frame="none", grid="none", cols="4,6"]
 |===
 | {nbsp} | *Links*
-.4+| image:../images/Patterns.png["Pattern Matching", 350, align=center]
+.4+| image:../images/Patterns.png["Pattern Matching", 300, align=center]
 | image:../images/Switch.png[Switch, 50, role="thumb"] link:patterns/switch/00_SwitchCasePatternMatching.adoc[Patterns for `switch`-`case` ▶️]
 | image:../images/Record.png[Record, 50, role="thumb"] link:patterns/records/00_RecordsPatternMatching.adoc[Patterns for Records ▶️]
 | image:../images/Array.png[Arrays, 50, role="thumb"] link:patterns/arrays/00_ArraysPatternMatching.adoc[Patterns for Arrays ▶️]

@@ -32,3 +32,9 @@ Record patterns disaggregate the values of a record type. The hope is eventually
 
 For a record class it is obvious how an instance can be deconstructed. For a general class this will require the explicit declaration of a deconstruction pattern to describe how an instance of the class can be deconstructed.
 
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| {nbsp}
+| link:../../Patterns.adoc[Patterns 🔼]
+| {nbsp}
+|===
