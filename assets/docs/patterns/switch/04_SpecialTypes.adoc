@@ -1,7 +1,7 @@
 = image:../../../images/Switch.png[Switch, 35, 35] Switch-Case Pattern Matching - Special Types
 :icons: font
 
-[source, java, linenums,  highlight=13..15]
+[source, java, linenums,  highlight=12..15]
 ----
 record Point(int i, int j) {}
 enum Color { RED, GREEN, BLUE; }
@@ -14,19 +14,20 @@ static void typeTester(Object o) {
     switch (o) {
         case null     -> System.out.println("null");
         case String s -> System.out.println("String");
-        case Color c  -> System.out.println("Color with " + c.name() );
-        case Point p  -> System.out.println("Record class: " + p.toString()); //<1>
-        case int[] ia -> System.out.println("int[] of length" + ia.length);   //<2>
-        case A a      -> System.out.println("Sealed type A");                 // <3>
+        case Color c  -> System.out.println("Color with " + c.name() );       //<1>
+        case Point p  -> System.out.println("Record class: " + p.toString()); //<2>
+        case int[] ia -> System.out.println("int[] of length" + ia.length);   //<3>
+        case A a      -> System.out.println("Sealed type A");                 //<4>
         case B b      -> System.out.println("Sealed type B");
         case C c      -> System.out.println("Sealed record type C");
         default       -> System.out.println("Something else");
     }
 }
 ----
-<1> Records +
-<2> Arrays +
-<3> Sealed Types - in `switch`-`case` pattern matching.
+<1> Enums +
+<2> Records +
+<3> Arrays +
+<4> Sealed Types - in `switch`-`case` pattern matching.
 
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
 |===

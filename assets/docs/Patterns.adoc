@@ -1,7 +1,7 @@
 = image:../images/AlgebraicInJava.png[Duke with Green Board,65] Pattern Matching in Java
 
 . The `instanceof` operator used to check the object's *Type Pattern*
-. After two previews, Java 16 added a feature *Pattern Matching* `instanceof` +
+. Java 16 added a feature *Pattern Matching* `instanceof`
 link:https://openjdk.java.net/jeps/305[_Java 14: JEP-305_],{nbsp}  {nbsp}
 link:https://openjdk.java.net/jeps/375[_Java 15: JEP-375_],{nbsp}  {nbsp}
 link:https://openjdk.java.net/jeps/394[*Java 16: JEP-394*]

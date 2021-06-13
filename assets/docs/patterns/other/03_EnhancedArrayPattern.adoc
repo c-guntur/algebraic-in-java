@@ -1,0 +1,29 @@
+= image:../../../images/OtherDetails.png["Other Details", 35, 35] Enhanced Array Patterns
+:icons: font
+
+* Imagine matching a `String` array, where we are only interested in the *eighth* and *ninth* elements of the array.
+
+* The pattern would look like:
+
+[source, java, line, linenums]
+----
+String[]{ var s1, var s2, var s3, var s4, var s5, var s6, var s7, var eighth, var ninth, ... }
+----
+* In this method, the pattern variable `y` is completely redundant.
+
+* Some sort of index-based component pattern would be more useful in this case
+
+* What may be possible:
+
+[source, java, line, linenums]
+----
+String[] { [8] -> var eighth, [9] -> var ninth}
+----
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:02_DontCarePattern.adoc[◀️ Don't Care Patterns]
+| link:00_OtherDetails.adoc[Other Details 🔼]
+| link:04_DeconstructionPatterns.adoc[Deconstruction Patterns ▶️]
+|===
+

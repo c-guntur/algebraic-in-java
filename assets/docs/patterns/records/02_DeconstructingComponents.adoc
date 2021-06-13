@@ -17,8 +17,7 @@ In effect, a *record pattern* disaggregates an instance of a record into its com
 
 [NOTE]
 Variable names are only introduced for the components `x` and `y`, not for the Point `p` itself. +
-More details in appendix.
-//TODO: Add appendix
+More info in "Other Details" section.
 
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
 |===

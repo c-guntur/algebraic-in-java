@@ -1,0 +1,29 @@
+= image:../../../images/OtherDetails.png["Other Details", 35, 35] Don't Care Patterns
+:icons: font
+
+* Often there are components of a structured object for which we do not want to explicitly declare pattern variables.
+
+[source, java, line, linenums]
+----
+void int getXfromPoint(Object o) {
+
+    if (o instanceof Point(var x, var y)){           //<1>
+        return x;
+    }
+    return -1;
+}
+----
+<1> In this method, the pattern variable `y` is completely redundant.
+
+
+* Proposals suggest that Java use the +_+ symbol to denote parameters that need not be named +
+{nbsp}{nbsp}{nbsp}{nbsp} - one possible extension would be to allow patterns such as `Point(var x, var _)`.
+
+* However, it might be possible to remove the `var`, or add syntactic sugar for `var` +_+.
+
+[caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
+|===
+| link:01_NamedOrAsPattern.adoc[◀️ Named Array and Record Patterns]
+| link:00_OtherDetails.adoc[Other Details 🔼]
+| link:03_EnhancedArrayPattern.adoc[Enhanced Array Patterns ▶️]
+|===
