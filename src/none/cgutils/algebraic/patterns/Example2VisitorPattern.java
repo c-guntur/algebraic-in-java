@@ -52,14 +52,14 @@ class Movie implements EntertainmentItem {
 
     private String title;
     private int rating;
-    private MovieType bookType;
+    private MovieType movieType;
 
     enum MovieType{DVD, BLUERAY}
 
-    public Movie(String title, int rating, MovieType bookType) {
+    public Movie(String title, int rating, MovieType movieType) {
         this.title = title;
         this.rating = rating;
-        this.bookType = bookType;
+        this.movieType = movieType;
     }
 
     @Override
@@ -67,7 +67,7 @@ class Movie implements EntertainmentItem {
         return "Movie{" +
                 "title='" + title + '\'' +
                 ", rating=" + rating +
-                ", bookType=" + bookType +
+                ", movieType=" + movieType +
                 '}';
     }
 
