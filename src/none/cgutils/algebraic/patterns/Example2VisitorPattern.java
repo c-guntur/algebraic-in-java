@@ -96,10 +96,22 @@ public class Example2VisitorPattern {
 
         EntertainmentItem[] properties = new EntertainmentItem[] {
 
-                new Book("The Lord Of The Rings", 5, Book.BookType.HARDCOVER),
-                new Book("Far From The Maddening Crowd", 3, Book.BookType.PAPERBACK),
-                new Movie("Star Trek - The Voyage Home", 5, Movie.MovieType.BLUERAY),
-                new Movie("Star Wars - Original Trilogy", 5, Movie.MovieType.DVD)
+                new Book(
+                        "The Lord Of The Rings",
+                        5,
+                        Book.BookType.HARDCOVER),
+                new Book(
+                        "Far From The Maddening Crowd",
+                        3,
+                        Book.BookType.PAPERBACK),
+                new Movie(
+                        "Star Trek - The Voyage Home",
+                        5,
+                        Movie.MovieType.BLUERAY),
+                new Movie(
+                        "Star Wars - Original Trilogy",
+                        5,
+                        Movie.MovieType.DVD)
         };
         EntertainmentVisitor visitor = new EntertainmentVisitor();
 
