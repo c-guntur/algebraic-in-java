@@ -17,7 +17,7 @@ String[]{ var s1, var s2, var s3, var s4, var s5, var s6, var s7, var eighth, va
 
 [source, java, line, linenums]
 ----
-String[] { [8] -> var eighth, [9] -> var ninth}
+String[] { [7] -> var eighth, [8] -> var ninth}
 ----
 
 [caption=" ", .center, cols="<40%, ^20%, >40%", width=95%, grid=none, frame=none]
