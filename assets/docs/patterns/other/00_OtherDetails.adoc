@@ -19,5 +19,5 @@ Future possibilities after initial delivery
 |===
 | {nbsp}
 | link:../../Patterns.adoc[Patterns 🔼]
-| link:01_Introduction.adoc[Introduction ▶️]
+| link:01_NamedOrAsPattern.adoc[Named Array and Record Patterns ▶️]
 |===
