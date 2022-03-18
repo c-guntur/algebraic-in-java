@@ -21,5 +21,4 @@ public class Example4ModernPatternMatch {
             System.out.println("aLong = [" + myLong +"]");
         }
     }
-
 }

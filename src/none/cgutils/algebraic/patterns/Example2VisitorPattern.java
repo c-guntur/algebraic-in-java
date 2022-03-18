@@ -22,6 +22,7 @@ class Book implements EntertainmentItem {
     enum BookType{PAPERBACK, HARDCOVER}
 
     public Book(String title, int rating, BookType bookType) {
+
         this.title = title;
         this.rating = rating;
         this.bookType = bookType;
@@ -29,6 +30,7 @@ class Book implements EntertainmentItem {
 
     @Override
     public String toString() {
+
         return "Book{" +
                 "title='" + title + '\'' +
                 ", rating=" + rating +

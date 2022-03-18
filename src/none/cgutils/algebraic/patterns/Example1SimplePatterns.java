@@ -11,6 +11,7 @@ public class Example1SimplePatterns {
     private static void printIfLong(Object object) {
 
         if(object instanceof Long) {
+
             Long aLong = (Long) object;
             System.out.println("aLong = [" + aLong +"]");
         }

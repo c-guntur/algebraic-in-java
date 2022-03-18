@@ -1,5 +1,7 @@
 = Algebraic data types
 
+
+
 image:assets/images/AlgebraicInJava.png[Duke with Green Board,640,398]
 
 Algebraic data types (ADTs) were introduced in Hope, a small functional programming language developed in the 1970s at the University of Edinburgh.
